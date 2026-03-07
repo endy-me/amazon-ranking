@@ -31,8 +31,8 @@ export const categories: Category[] = [
   },
   {
     slug: "game-software",
-    name: "ゲームソフト",
-    description: "Switch、PS5、PCゲームなど各機種の人気ソフト",
+    name: "ゲーム",
+    description: "Switch、PS5、PCゲームなど各機種の人気ソフト・周辺機器",
     icon: "🎮",
     color: "red",
   },
