@@ -1,0 +1,53 @@
+name: ランキング自動更新
+
+on:
+  schedule:
+    # 毎日 午前9時 JST (UTC 0:00)
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      # クリエイターズAPI が有効な場合
+      - name: クリエイターズAPIでランキング取得
+        if: ${{ secrets.CREATORS_CREDENTIAL_ID != '' }}
+        env:
+          CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+          CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
+          CREATORS_ASSOCIATE_TAG: amazonrankingbest-22
+          CREATORS_VERSION: "3.3"
+        run: npx tsx scripts/fetch-rankings.ts
+
+      # まだ資格がない場合 → manual-input を使う
+      - name: 手動データを反映
+        if: ${{ secrets.CREATORS_CREDENTIAL_ID == '' }}
+        run: npx tsx scripts/add-products.ts
+
+      - name: 変更確認
+        id: check
+        run: |
+          git diff --quiet src/data/generated/ ranking-history/ || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: コミット & プッシュ
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/generated/ ranking-history/
+          git commit -m "chore: ランキング自動更新 $(date '+%Y-%m-%d')"
+          git push

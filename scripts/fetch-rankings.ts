@@ -1,0 +1,228 @@
+/**
+ * Amazon クリエイターズAPI を使ったランキング自動取得スクリプト
+ *
+ * 【実行方法】
+ *   npx tsx scripts/fetch-rankings.ts
+ *
+ * 【必要条件】
+ *   30日以内に10件の紹介料発生でアカウントが有効になります
+ *
+ * 【環境変数】(.env.local に設定)
+ *   CREATORS_CREDENTIAL_ID     クリエイターズAPI 認証情報ID
+ *   CREATORS_CREDENTIAL_SECRET クリエイターズAPI シークレット
+ *   CREATORS_ASSOCIATE_TAG     アソシエイトタグ
+ */
+
+import fs from "fs";
+import path from "path";
+
+// .env.local を読み込む
+const ENV_PATH = path.join(process.cwd(), ".env.local");
+if (fs.existsSync(ENV_PATH)) {
+  fs.readFileSync(ENV_PATH, "utf-8")
+    .split("\n")
+    .forEach((line) => {
+      const [key, ...vals] = line.split("=");
+      if (key?.trim() && vals.length > 0) {
+        process.env[key.trim()] = vals.join("=").trim();
+      }
+    });
+}
+
+const CREDENTIAL_ID = process.env.CREATORS_CREDENTIAL_ID;
+const CREDENTIAL_SECRET = process.env.CREATORS_CREDENTIAL_SECRET;
+const ASSOCIATE_TAG = process.env.CREATORS_ASSOCIATE_TAG ?? "amazonrankingbest-22";
+const API_VERSION = process.env.CREATORS_VERSION ?? "3.3";
+
+if (!CREDENTIAL_ID || !CREDENTIAL_SECRET) {
+  console.error("❌ クリエイターズAPIの認証情報が設定されていません");
+  console.error("   .env.local に CREATORS_CREDENTIAL_ID と CREATORS_CREDENTIAL_SECRET を設定してください");
+  process.exit(1);
+}
+
+const TOKEN_ENDPOINT = "https://api.amazon.co.jp/auth/o2/token";
+const API_ENDPOINT = "https://creatorsapi.amazon/catalog/v1/searchItems";
+const MARKETPLACE = "www.amazon.co.jp";
+const TODAY = new Date().toISOString().split("T")[0];
+const MAX_ITEMS = 20;
+const GENERATED_DIR = path.join(process.cwd(), "src/data/generated");
+const HISTORY_DIR = path.join(process.cwd(), "ranking-history", TODAY);
+
+// キャッシュ
+let cachedToken: string | null = null;
+let tokenExpiry = 0;
+
+async function getAccessToken(): Promise<string> {
+  if (cachedToken && Date.now() < tokenExpiry - 30000) {
+    return cachedToken;
+  }
+
+  const body = new URLSearchParams({
+    grant_type: "client_credentials",
+    client_id: CREDENTIAL_ID!,
+    client_secret: CREDENTIAL_SECRET!,
+    scope: "creatorsapi::default",
+  });
+
+  const res = await fetch(TOKEN_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: body.toString(),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`トークン取得失敗 (${res.status}): ${err}`);
+  }
+
+  const data = await res.json() as { access_token: string; expires_in: number };
+  cachedToken = data.access_token;
+  tokenExpiry = Date.now() + (data.expires_in ?? 3600) * 1000;
+  return cachedToken;
+}
+
+interface GeneratedProduct {
+  rank: number;
+  asin: string;
+  title: string;
+  image: string;
+  affiliateUrl: string;
+  price: string | null;
+  description: string | null;
+  badge: string | null;
+  updatedAt: string;
+}
+
+async function searchItems(config: { slug: string; name: string; searchIndex: string; browseNodeId: string }): Promise<GeneratedProduct[]> {
+  const token = await getAccessToken();
+
+  const body = {
+    partnerTag: ASSOCIATE_TAG,
+    partnerType: "Associates",
+    searchIndex: config.searchIndex,
+    ...(config.browseNodeId ? { browseNodeId: config.browseNodeId } : {}),
+    itemCount: MAX_ITEMS,
+    sortBy: "Featured",
+    resources: [
+      "itemInfo.title",
+      "images.primary.large",
+      "images.primary.medium",
+      "offersV2.listings.price",
+      "browseNodeInfo.browseNodes.salesRank",
+    ],
+  };
+
+  const res = await fetch(API_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Authorization": `Bearer ${token}, Version ${API_VERSION}`,
+      "x-marketplace": MARKETPLACE,
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`API エラー (${res.status}): ${err}`);
+  }
+
+  const data = await res.json() as {
+    searchResult?: {
+      items?: Array<{
+        asin?: string;
+        itemInfo?: { title?: { displayValue?: string } };
+        images?: { primary?: { large?: { url?: string }; medium?: { url?: string } } };
+        offersV2?: { listings?: Array<{ price?: { displayAmount?: string } }> };
+      }>;
+    };
+  };
+
+  const items = data.searchResult?.items ?? [];
+
+  return items
+    .map((item, i) => {
+      const asin = item.asin ?? "";
+      const title = item.itemInfo?.title?.displayValue ?? "";
+      const image =
+        item.images?.primary?.large?.url ??
+        item.images?.primary?.medium?.url ?? "";
+      const price = item.offersV2?.listings?.[0]?.price?.displayAmount ?? null;
+
+      if (!asin || !title) return null;
+
+      return {
+        rank: i + 1,
+        asin,
+        title,
+        image,
+        affiliateUrl: `https://www.amazon.co.jp/dp/${asin}/?tag=${ASSOCIATE_TAG}`,
+        price,
+        description: null,
+        badge: i === 0 ? "1位" : null,
+        updatedAt: TODAY,
+      } satisfies GeneratedProduct;
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null);
+}
+
+// カテゴリ設定
+const CATEGORY_CONFIG = [
+  { slug: "pc",                name: "PC・周辺機器",     searchIndex: "Computers",   browseNodeId: "2127212051" },
+  { slug: "camera",            name: "カメラ",            searchIndex: "Electronics", browseNodeId: "2489779051" },
+  { slug: "smartphone",        name: "スマートフォン",    searchIndex: "Electronics", browseNodeId: "2351655051" },
+  { slug: "tablet",            name: "タブレット",        searchIndex: "Electronics", browseNodeId: "2048320051" },
+  { slug: "game-software",     name: "ゲームソフト",      searchIndex: "VideoGames",  browseNodeId: "637392"     },
+  { slug: "toys",              name: "おもちゃ",          searchIndex: "Toys",        browseNodeId: "2016926051" },
+  { slug: "books-comic",       name: "コミック",          searchIndex: "Books",       browseNodeId: "465392"     },
+  { slug: "books-magazine",    name: "雑誌",              searchIndex: "Magazines",   browseNodeId: "465452"     },
+  { slug: "books-practical",   name: "実用書",            searchIndex: "Books",       browseNodeId: "466282"     },
+  { slug: "books-engineering", name: "コンピュータ・IT",  searchIndex: "Books",       browseNodeId: "466286"     },
+  { slug: "sale",              name: "タイムセール",      searchIndex: "Electronics", browseNodeId: ""           },
+];
+
+function ensureDir(dir: string) {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
+
+async function processCategory(config: { slug: string; name: string; searchIndex: string; browseNodeId: string }) {
+  console.log(`\n[${config.name}] 取得中...`);
+  try {
+    const products = await searchItems(config);
+    if (products.length === 0) {
+      console.warn("  ⚠ 商品が取得できませんでした");
+      return;
+    }
+
+    const data = { slug: config.slug, name: config.name, updatedAt: TODAY, products };
+    const json = JSON.stringify(data, null, 2);
+
+    fs.writeFileSync(path.join(GENERATED_DIR, `${config.slug}.json`), json, "utf-8");
+    fs.writeFileSync(path.join(HISTORY_DIR, `${config.slug}.json`), json, "utf-8");
+
+    console.log(`  ✓ ${products.length}件取得`);
+  } catch (err) {
+    console.error(`  ✗ ${(err as Error).message}`);
+  }
+}
+
+async function main() {
+  console.log("=== Amazon クリエイターズAPI ランキング自動更新 ===");
+  console.log(`更新日: ${TODAY}`);
+  ensureDir(GENERATED_DIR);
+  ensureDir(HISTORY_DIR);
+
+  for (const config of CATEGORY_CONFIG) {
+    await processCategory(config);
+    await new Promise((r) => setTimeout(r, 800));
+  }
+
+  console.log("\n=== 完了 ===");
+  console.log(`生成先: src/data/generated/`);
+  console.log(`履歴:   ranking-history/${TODAY}/`);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
