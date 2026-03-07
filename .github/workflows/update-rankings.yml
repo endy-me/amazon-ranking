@@ -31,6 +31,8 @@ jobs:
           CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
           CREATORS_ASSOCIATE_TAG: amazonrankingbest-22
           CREATORS_VERSION: "3.3"
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npx tsx scripts/fetch-rankings.ts
 
       # まだ資格がない場合 → manual-input を使う

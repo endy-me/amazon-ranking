@@ -2,7 +2,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { categories, getCategoryBySlug } from "@/data/categories";
 import { getProductsBySlug } from "@/data/products";
+import { getRankingWithTrend, isDbAvailable } from "@/lib/db";
 import { ProductCard } from "@/components/ProductCard";
+import { Product } from "@/types";
 import Link from "next/link";
 
 interface Props {
@@ -26,12 +28,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
+  if (!category) notFound();
 
-  if (!category) {
-    notFound();
+  // DBが使える場合はSupabaseから取得（推移データ付き）
+  let products: Product[] = [];
+  let hasDbData = false;
+
+  if (await isDbAvailable()) {
+    const dbRows = await getRankingWithTrend(slug, 20);
+    if (dbRows.length > 0) {
+      hasDbData = true;
+      products = dbRows.map((row) => ({
+        rank: row.rank,
+        asin: row.asin,
+        title: row.title,
+        image: row.image ?? "",
+        affiliateUrl: `https://www.amazon.co.jp/dp/${row.asin}/?tag=amazonrankingbest-22`,
+        price: row.price ?? undefined,
+        updatedAt: row.captured_at,
+        rankChange: row.rank_change,
+      }));
+    }
   }
 
-  const products = getProductsBySlug(slug);
+  // DBが使えない or データなし → 手動データにフォールバック
+  if (!hasDbData) {
+    products = getProductsBySlug(slug);
+  }
+
   const updatedAt = products[0]?.updatedAt ?? "";
 
   return (
@@ -42,24 +66,31 @@ export default async function CategoryPage({ params }: Props) {
           ホーム
         </Link>
         <span>/</span>
-        <span className="text-gray-700 font-medium">{category.name}</span>
+        <span className="text-gray-700 font-medium">{category!.name}</span>
       </nav>
 
       {/* カテゴリヘッダー */}
-      <div className="flex items-center gap-4 mb-8">
-        <span className="text-5xl">{category.icon}</span>
+      <div className="flex items-center gap-4 mb-6">
+        <span className="text-5xl">{category!.icon}</span>
         <div>
           <h1 className="text-2xl font-black text-gray-900">
-            {category.name} 売れ筋ランキング
+            {category!.name} 売れ筋ランキング
           </h1>
-          <p className="text-sm text-gray-500 mt-1">{category.description}</p>
-          {updatedAt && (
-            <p className="text-xs text-gray-400 mt-1">最終更新: {updatedAt}</p>
-          )}
+          <p className="text-sm text-gray-500 mt-1">{category!.description}</p>
+          <div className="flex items-center gap-3 mt-1">
+            {updatedAt && (
+              <p className="text-xs text-gray-400">最終更新: {updatedAt}</p>
+            )}
+            {hasDbData && (
+              <span className="text-xs text-emerald-600 font-medium">
+                ▲▼ 先週比の順位変動を表示中
+              </span>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* アフィリエイト表示 */}
+      {/* アフィリエイト免責 */}
       <div className="bg-orange-50 border border-orange-100 rounded-lg px-4 py-2 text-xs text-gray-500 mb-6">
         ※ 当サイトはAmazonアソシエイト・プログラムの参加者です。リンクを経由してご購入いただくと、紹介料が発生する場合があります。
       </div>
@@ -78,7 +109,7 @@ export default async function CategoryPage({ params }: Props) {
         </div>
       )}
 
-      {/* 他のカテゴリへのリンク */}
+      {/* 他のカテゴリ */}
       <div className="mt-12">
         <h2 className="text-lg font-bold text-gray-800 mb-4">他のカテゴリを見る</h2>
         <div className="flex flex-wrap gap-2">

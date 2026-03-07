@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Product } from "@/types";
 import { RankBadge } from "./RankBadge";
+import { RankTrend } from "./RankTrend";
 
 interface ProductCardProps {
   product: Product;
@@ -55,12 +56,13 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-2 flex-wrap mb-1">
+            <div className="flex items-center gap-2 flex-wrap mb-1">
               {product.badge && (
                 <span className="inline-block px-2 py-0.5 text-xs font-bold bg-orange-100 text-orange-700 rounded-full">
                   {product.badge}
                 </span>
               )}
+              <RankTrend change={product.rankChange} />
             </div>
             <h3 className="font-semibold text-gray-900 text-sm leading-snug line-clamp-3">
               {product.title}

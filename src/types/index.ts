@@ -8,6 +8,7 @@ export interface Product {
   description?: string;
   badge?: string;
   updatedAt: string;
+  rankChange?: number | null; // 正数=上昇, 負数=下降, null=初登場
 }
 
 export interface Category {

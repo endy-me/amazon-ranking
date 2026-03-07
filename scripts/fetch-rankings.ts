@@ -15,6 +15,7 @@
 
 import fs from "fs";
 import path from "path";
+import { createClient } from "@supabase/supabase-js";
 
 // .env.local を読み込む
 const ENV_PATH = path.join(process.cwd(), ".env.local");
@@ -33,6 +34,15 @@ const CREDENTIAL_ID = process.env.CREATORS_CREDENTIAL_ID;
 const CREDENTIAL_SECRET = process.env.CREATORS_CREDENTIAL_SECRET;
 const ASSOCIATE_TAG = process.env.CREATORS_ASSOCIATE_TAG ?? "amazonrankingbest-22";
 const API_VERSION = process.env.CREATORS_VERSION ?? "3.3";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+function getSupabaseAdmin() {
+  if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) return null;
+  return createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
+    auth: { persistSession: false },
+  });
+}
 
 if (!CREDENTIAL_ID || !CREDENTIAL_SECRET) {
   console.error("❌ クリエイターズAPIの認証情報が設定されていません");
@@ -199,6 +209,28 @@ async function processCategory(config: { slug: string; name: string; searchIndex
 
     fs.writeFileSync(path.join(GENERATED_DIR, `${config.slug}.json`), json, "utf-8");
     fs.writeFileSync(path.join(HISTORY_DIR, `${config.slug}.json`), json, "utf-8");
+
+    // Supabase に保存
+    const supabase = getSupabaseAdmin();
+    if (supabase) {
+      const rows = products.map((p) => ({
+        category: config.slug,
+        rank: p.rank,
+        asin: p.asin,
+        title: p.title,
+        image: p.image || null,
+        price: p.price || null,
+        captured_at: TODAY,
+      }));
+      const { error } = await supabase
+        .from("ranking_snapshots")
+        .upsert(rows, { onConflict: "category,captured_at,rank" });
+      if (error) {
+        console.warn(`  ⚠ Supabase書き込みエラー: ${error.message}`);
+      } else {
+        console.log(`  ✓ Supabaseに${rows.length}件保存`);
+      }
+    }
 
     console.log(`  ✓ ${products.length}件取得`);
   } catch (err) {
