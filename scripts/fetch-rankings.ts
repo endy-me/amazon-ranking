@@ -178,17 +178,27 @@ async function searchItems(config: { slug: string; name: string; searchIndex: st
 
 // カテゴリ設定
 const CATEGORY_CONFIG = [
-  { slug: "pc",                name: "PC・周辺機器",     searchIndex: "Computers",   browseNodeId: "2127212051" },
-  { slug: "camera",            name: "カメラ",            searchIndex: "Electronics", browseNodeId: "2489779051" },
-  { slug: "smartphone",        name: "スマートフォン",    searchIndex: "Electronics", browseNodeId: "2351655051" },
-  { slug: "tablet",            name: "タブレット",        searchIndex: "Electronics", browseNodeId: "2048320051" },
-  { slug: "game-software",     name: "ゲームソフト",      searchIndex: "VideoGames",  browseNodeId: "637392"     },
-  { slug: "toys",              name: "おもちゃ",          searchIndex: "Toys",        browseNodeId: "2016926051" },
-  { slug: "books-comic",       name: "コミック",          searchIndex: "Books",       browseNodeId: "465392"     },
-  { slug: "books-magazine",    name: "雑誌",              searchIndex: "Magazines",   browseNodeId: "465452"     },
-  { slug: "books-practical",   name: "実用書",            searchIndex: "Books",       browseNodeId: "466282"     },
-  { slug: "books-engineering", name: "コンピュータ・IT",  searchIndex: "Books",       browseNodeId: "466286"     },
-  { slug: "sale",              name: "タイムセール",      searchIndex: "Electronics", browseNodeId: ""           },
+  // PC・ガジェット
+  { slug: "laptop",            name: "ノートPC",              searchIndex: "Computers",      browseNodeId: "2151981051" },
+  { slug: "desktop",           name: "デスクトップPC",        searchIndex: "Computers",      browseNodeId: "2151949051" },
+  { slug: "display",           name: "ディスプレイ",          searchIndex: "Computers",      browseNodeId: "2151982051" },
+  { slug: "tablet",            name: "タブレット",            searchIndex: "Computers",      browseNodeId: "2152014051" },
+  { slug: "amazon-devices",    name: "Amazonデバイス",        searchIndex: "AmazonDevices",  browseNodeId: ""           },
+  // スマホ・ウォッチ
+  { slug: "smartphone",        name: "スマートフォン",        searchIndex: "Electronics",    browseNodeId: "128188011"  },
+  { slug: "smartwatch",        name: "スマートウォッチ",      searchIndex: "Electronics",    browseNodeId: "2725002051" },
+  // カメラ
+  { slug: "mirrorless-camera", name: "ミラーレス一眼",        searchIndex: "Electronics",    browseNodeId: "2285020051" },
+  { slug: "compact-camera",    name: "コンパクトデジカメ",    searchIndex: "Electronics",    browseNodeId: "387455011"  },
+  { slug: "action-camera",     name: "アクションカメラ",      searchIndex: "Electronics",    browseNodeId: "2680377051" },
+  // オーディオ・ゲーム
+  { slug: "earphone",          name: "イヤホン・ヘッドホン",  searchIndex: "Electronics",    browseNodeId: "7251477051" },
+  { slug: "game-software",     name: "ゲーム",                searchIndex: "VideoGames",     browseNodeId: "637392"     },
+  // 本
+  { slug: "books-engineering", name: "コンピュータ・IT",      searchIndex: "Books",          browseNodeId: "466298"     },
+  { slug: "books-comic",       name: "コミック",              searchIndex: "Books",          browseNodeId: "2501045051" },
+  { slug: "books-magazine",    name: "雑誌",                  searchIndex: "Books",          browseNodeId: "13384021"   },
+  { slug: "books-photo",       name: "写真集",                searchIndex: "Books",          browseNodeId: "500592"     },
 ];
 
 function ensureDir(dir: string) {

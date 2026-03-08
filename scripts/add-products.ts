@@ -67,10 +67,11 @@ function processSlug(slug: string) {
 }
 
 const ALL_SLUGS = [
-  "pc", "camera", "smartphone", "tablet",
-  "game-software", "toys",
-  "books-comic", "books-magazine", "books-practical", "books-engineering",
-  "sale",
+  "laptop", "desktop", "display", "tablet", "amazon-devices",
+  "smartphone", "smartwatch",
+  "mirrorless-camera", "compact-camera", "action-camera",
+  "earphone", "game-software",
+  "books-engineering", "books-comic", "books-magazine", "books-photo",
 ];
 
 const targetSlug = process.argv[2];
