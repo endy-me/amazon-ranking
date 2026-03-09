@@ -4,6 +4,7 @@ import { categories, getCategoryBySlug } from "@/data/categories";
 import { getProductsBySlug } from "@/data/products";
 import { getRankingWithTrend, getAvailableDates, isDbAvailable } from "@/lib/db";
 import { ProductCard } from "@/components/ProductCard";
+import { RankingHistoryNav } from "@/components/RankingHistoryNav";
 import { Product } from "@/types";
 import { mergeEditorPicks } from "@/lib/editor-picks";
 import Link from "next/link";
@@ -115,23 +116,7 @@ export default async function CategoryPage({ params }: Props) {
         </div>
       )}
 
-      {/* 過去のランキング */}
-      {availableDates.length > 0 && (
-        <div className="mt-10">
-          <h2 className="text-lg font-bold text-gray-800 mb-3">過去のランキングを見る</h2>
-          <div className="flex flex-wrap gap-2">
-            {availableDates.map((date) => (
-              <Link
-                key={date}
-                href={`/category/${slug}/${date}`}
-                className="px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:border-orange-300 hover:text-orange-600 transition-colors"
-              >
-                {date}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      <RankingHistoryNav slug={slug} dates={availableDates} />
 
       {/* 他のカテゴリ */}
       <div className="mt-12">
