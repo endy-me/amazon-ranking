@@ -5,6 +5,7 @@ import { getProductsBySlug } from "@/data/products";
 import { getRankingWithTrend, isDbAvailable } from "@/lib/db";
 import { ProductCard } from "@/components/ProductCard";
 import { Product } from "@/types";
+import { mergeEditorPicks } from "@/lib/editor-picks";
 import Link from "next/link";
 
 interface Props {
@@ -55,6 +56,8 @@ export default async function CategoryPage({ params }: Props) {
   if (!hasDbData) {
     products = getProductsBySlug(slug);
   }
+
+  products = mergeEditorPicks(products);
 
   const updatedAt = products[0]?.updatedAt ?? "";
 

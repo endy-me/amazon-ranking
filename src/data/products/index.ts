@@ -14,6 +14,7 @@ import { booksMagazineProducts } from "./books-magazine";
 import { booksPracticalProducts } from "./books-practical";
 import { booksEngineeringProducts } from "./books-engineering";
 import { saleProducts } from "./sale";
+import { smartwatchProducts } from "./smartwatch";
 
 const manualProductMap: Record<string, Product[]> = {
   pc: pcProducts,
@@ -27,6 +28,7 @@ const manualProductMap: Record<string, Product[]> = {
   "books-practical": booksPracticalProducts,
   "books-engineering": booksEngineeringProducts,
   sale: saleProducts,
+  smartwatch: smartwatchProducts,
 };
 
 // 自動生成JSONを読み込む（存在する場合は優先）

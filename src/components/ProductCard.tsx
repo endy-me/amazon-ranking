@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Product } from "@/types";
 import { RankBadge } from "./RankBadge";
 import { RankTrend } from "./RankTrend";
+import { EditorComment } from "./EditorComment";
 
 interface ProductCardProps {
   product: Product;
@@ -75,6 +76,7 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
             )}
           </div>
         </div>
+        <EditorComment rating={product.editorRating} comment={product.editorComment} />
         <a
           href={product.affiliateUrl}
           target="_blank"
