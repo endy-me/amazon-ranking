@@ -64,6 +64,43 @@ export async function getAsinHistory(
   return data ?? [];
 }
 
+// 利用可能な日付一覧を取得（新しい順）
+export async function getAvailableDates(category: string): Promise<string[]> {
+  const { data } = await getSupabaseClient()
+    .from("ranking_snapshots")
+    .select("captured_at")
+    .eq("category", category)
+    .order("captured_at", { ascending: false });
+
+  if (!data) return [];
+  const seen = new Set<string>();
+  const dates: string[] = [];
+  for (const row of data as { captured_at: string }[]) {
+    const date = String(row.captured_at).substring(0, 10);
+    if (!seen.has(date)) {
+      seen.add(date);
+      dates.push(date);
+    }
+  }
+  return dates;
+}
+
+// 特定日のランキングを取得
+export async function getRankingByDate(
+  category: string,
+  date: string
+): Promise<RankSnapshot[]> {
+  const { data } = await getSupabaseClient()
+    .from("ranking_snapshots")
+    .select("*")
+    .eq("category", category)
+    .like("captured_at", `${date}%`)
+    .order("rank", { ascending: true });
+
+  if (!data) return [];
+  return (data as RankSnapshot[]).map((row) => ({ ...row, prev_rank: null, rank_change: null }));
+}
+
 // DBが利用可能かチェック
 export async function isDbAvailable(): Promise<boolean> {
   if (
