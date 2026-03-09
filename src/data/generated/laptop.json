@@ -1,0 +1,116 @@
+{
+  "slug": "laptop",
+  "updatedAt": "2026-03-09",
+  "products": [
+    {
+      "rank": 1,
+      "asin": "B0DGXB37K5",
+      "title": "【Amazon.co.jp限定】Lenovo Chromebook 10.95インチ プロセッサー搭載 83HH000TJP",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/61AxWsvfPKL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DGXB37K5/?tag=amazonrankingbest-22",
+      "price": "¥49,800",
+      "description": null,
+      "badge": "1位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 2,
+      "asin": "B0DTJ25HR3",
+      "title": "LIFEBOOK U939 Win11搭載 1920x1080 Core i5-8365U",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71i5gOPCYmL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DTJ25HR3/?tag=amazonrankingbest-22",
+      "price": "¥25,330",
+      "description": null,
+      "badge": "2位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 3,
+      "asin": "B0GGB3C5QV",
+      "title": "Lenovo ノートPC Windows11 バッテリー駆動12.6時間 83K90023JP",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/713U2bdKbHL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GGB3C5QV/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": "3位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 4,
+      "asin": "B0FQ6PCF9R",
+      "title": "HP ノートPC Copilotキー搭載 ナチュラルシルバー BJ0M7PA-AAAF",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/61QNfrpCVAL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FQ6PCF9R/?tag=amazonrankingbest-22",
+      "price": "¥113,770",
+      "description": null,
+      "badge": "4位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 5,
+      "asin": "B0GGB8QDP5",
+      "title": "Lenovo ノートPC Windows11 バッテリー駆動17.4時間 83K700H6JP",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71VcnJWq1oL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GGB8QDP5/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": "5位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 6,
+      "asin": "B0FBW522DV",
+      "title": "FMV ノートパソコン WA1-K2 スーパーマルチドライブ FMVWK2A175_AZ",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/51PlB3e9vuL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FBW522DV/?tag=amazonrankingbest-22",
+      "price": "¥135,700",
+      "description": null,
+      "badge": "6位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 7,
+      "asin": "B0FW47TZRX",
+      "title": "FMV WE1-K3 ノートPC Copilotキー搭載 FMVWK3E15W_AZ",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/51G+1zcR5FL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FW47TZRX/?tag=amazonrankingbest-22",
+      "price": "¥108,800",
+      "description": null,
+      "badge": "7位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 8,
+      "asin": "B0GKMQTGWW",
+      "title": "Lenovo ThinkPad X1 Carbon ノートパソコン Office付き",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71+geQQY81L._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GKMQTGWW/?tag=amazonrankingbest-22",
+      "price": "¥53,820",
+      "description": null,
+      "badge": "8位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 9,
+      "asin": "B0FXMJL93S",
+      "title": "【整備済み品】NEC 15.6型 Windows11 Office Celeron",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71614T1NiIL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FXMJL93S/?tag=amazonrankingbest-22",
+      "price": "¥12,580",
+      "description": null,
+      "badge": "9位",
+      "updatedAt": "2026-03-09"
+    },
+    {
+      "rank": 10,
+      "asin": "B0GR6F619Z",
+      "title": "Apple MacBook Pro M4チップ 13インチ 8GBメモリ 512GB SSD",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/61svvKTKTlL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GR6F619Z/?tag=amazonrankingbest-22",
+      "price": "¥99,800",
+      "description": null,
+      "badge": "10位",
+      "updatedAt": "2026-03-09"
+    }
+  ]
+}
