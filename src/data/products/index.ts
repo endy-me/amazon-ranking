@@ -21,6 +21,7 @@ import { mirrorlessCameraProducts } from "./mirrorless-camera";
 import { compactCameraProducts } from "./compact-camera";
 import { earphoneProducts } from "./earphone";
 import { amazonDevicesProducts } from "./amazon-devices";
+import { displayProducts } from "./display";
 
 const manualProductMap: Record<string, Product[]> = {
   pc: pcProducts,
@@ -41,6 +42,7 @@ const manualProductMap: Record<string, Product[]> = {
   "compact-camera": compactCameraProducts,
   earphone: earphoneProducts,
   "amazon-devices": amazonDevicesProducts,
+  display: displayProducts,
 };
 
 // 自動生成JSONを読み込む（存在する場合は優先）
