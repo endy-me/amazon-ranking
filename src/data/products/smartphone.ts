@@ -43,7 +43,7 @@ export const smartphoneProducts: Product[] = [
     rank: 5,
     asin: "B0FDKVB871",
     title: "Motorola moto g85 5G 128GB ブラックオイスター SIMフリー NFC・FeliCa対応 6.7インチ IP68・IP69防水防塵",
-    price: "¥280,909",
+    price: "¥28,909",
     image: "https://images-fe.ssl-images-amazon.com/images/I/71-yKdYHZNL._AC_UL600_SR600,400_.jpg",
     affiliateUrl: `https://www.amazon.co.jp/dp/B0FDKVB871/?tag=${ASSOCIATE_TAG}`,
     updatedAt: "2026-03-09",
