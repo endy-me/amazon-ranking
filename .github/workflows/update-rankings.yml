@@ -10,6 +10,13 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
+      CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
+      CREATORS_ASSOCIATE_TAG: amazonrankingbest-22
+      CREATORS_VERSION: "3.3"
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -25,19 +32,12 @@ jobs:
 
       # クリエイターズAPI が有効な場合
       - name: クリエイターズAPIでランキング取得
-        if: ${{ secrets.CREATORS_CREDENTIAL_ID != '' }}
-        env:
-          CREATORS_CREDENTIAL_ID: ${{ secrets.CREATORS_CREDENTIAL_ID }}
-          CREATORS_CREDENTIAL_SECRET: ${{ secrets.CREATORS_CREDENTIAL_SECRET }}
-          CREATORS_ASSOCIATE_TAG: amazonrankingbest-22
-          CREATORS_VERSION: "3.3"
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        if: ${{ env.CREATORS_CREDENTIAL_ID != '' }}
         run: npx tsx scripts/fetch-rankings.ts
 
       # まだ資格がない場合 → manual-input を使う
       - name: 手動データを反映
-        if: ${{ secrets.CREATORS_CREDENTIAL_ID == '' }}
+        if: ${{ env.CREATORS_CREDENTIAL_ID == '' }}
         run: npx tsx scripts/add-products.ts
 
       - name: 変更確認
