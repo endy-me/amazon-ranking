@@ -2,7 +2,7 @@ import { getSupabaseClient } from "./supabase";
 
 export interface RankSnapshot {
   category: string;
-  rank: number;
+  current_rank: number;
   asin: string;
   title: string;
   image: string | null;
@@ -98,7 +98,7 @@ export async function getRankingByDate(
     .order("rank", { ascending: true });
 
   if (!data) return [];
-  return (data as RankSnapshot[]).map((row) => ({ ...row, prev_rank: null, rank_change: null }));
+  return (data as { category: string; rank: number; asin: string; title: string; image: string | null; price: string | null; captured_at: string }[]).map((row) => ({ ...row, current_rank: row.rank, prev_rank: null, rank_change: null }));
 }
 
 // DBが利用可能かチェック

@@ -41,7 +41,7 @@ export default async function CategoryPage({ params }: Props) {
     if (dbRows.length > 0) {
       hasDbData = true;
       products = dbRows.map((row) => ({
-        rank: row.rank,
+        rank: row.current_rank,
         asin: row.asin,
         title: row.title,
         image: row.image ?? "",

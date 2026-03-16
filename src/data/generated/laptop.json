@@ -1,117 +1,116 @@
 {
   "slug": "laptop",
-  "name": "ノートPC",
-  "updatedAt": "2026-03-16",
+  "updatedAt": "2026-03-09",
   "products": [
     {
       "rank": 1,
-      "asin": "B0GR6HZGQ4",
-      "title": "Apple 2026 MacBook Neo A18 Proチップ搭載13インチノートブック：AIとApple Intelligenceのために設計、Liquid Retinaディスプレイ、8GBユニファイドメモリ、512GB SSDストレージ、1080p FaceTime HDカメラ、Touch ID - シルバー",
-      "image": "https://m.media-amazon.com/images/I/31rP470sZ8L._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GR6HZGQ4/?tag=amazonrankingbest-22",
-      "price": null,
+      "asin": "B0DGXB37K5",
+      "title": "【Amazon.co.jp限定】Lenovo Chromebook 10.95インチ プロセッサー搭載 83HH000TJP",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/61AxWsvfPKL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DGXB37K5/?tag=amazonrankingbest-22",
+      "price": "¥49,800",
       "description": null,
       "badge": "1位",
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 2,
-      "asin": "B0GR1VMZRD",
-      "title": "Apple 2026 MacBook Air M5チップ搭載13インチノートブック：AIとApple Intelligence、13.6インチLiquid Retinaディスプレイ、16GBユニファイドメモリ、512GB SSDストレージ、12MPセンターフレームカメラ、Touch ID - シルバー",
-      "image": "https://m.media-amazon.com/images/I/41ldKaauZVL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GR1VMZRD/?tag=amazonrankingbest-22",
-      "price": null,
+      "asin": "B0DTJ25HR3",
+      "title": "LIFEBOOK U939 Win11搭載 1920x1080 Core i5-8365U",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71i5gOPCYmL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DTJ25HR3/?tag=amazonrankingbest-22",
+      "price": "¥25,330",
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "2位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 3,
-      "asin": "B0DGXB37K5",
-      "title": "【Amazon.co.jp限定】Lenovo Chromebook クロームブック Duet 11 10.95インチ MediaTek Kompanio 838 プロセッサー​搭載 メモリ8GB eMMC 128GB 重量1.0kg 83HH000TJP パソコン",
-      "image": "https://m.media-amazon.com/images/I/41fh5OS1f9L._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DGXB37K5/?tag=amazonrankingbest-22",
+      "asin": "B0GGB3C5QV",
+      "title": "Lenovo ノートPC Windows11 バッテリー駆動12.6時間 83K90023JP",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/713U2bdKbHL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GGB3C5QV/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "3位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 4,
       "asin": "B0FQ6PCF9R",
-      "title": "HP ノートパソコン 15-fd 15.6インチ インテル Core Ultra 5 125H メモリ16GB SSD512GB Windows 11 Microsoft Office 2024搭載 WPS Office搭載 カメラシャッター 指紋認証 薄型 Copilotキー搭載 ナチュラルシルバー (BJ0M7PA-AAAF)",
-      "image": "https://m.media-amazon.com/images/I/41ThMHxrCSL._SL500_.jpg",
+      "title": "HP ノートPC Copilotキー搭載 ナチュラルシルバー BJ0M7PA-AAAF",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/61QNfrpCVAL._AC_UL600_SR600,400_.jpg",
       "affiliateUrl": "https://www.amazon.co.jp/dp/B0FQ6PCF9R/?tag=amazonrankingbest-22",
-      "price": null,
+      "price": "¥113,770",
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "4位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 5,
-      "asin": "B07JZX1H2D",
-      "title": "tomtoc 360°保護 15.6 16インチ パソコンケース 15.6~16型 Dell NEC Lavie ASUS HP dynabook Lenovo対応 全方位耐衝撃 ノートPCケース スリーブ ラップトップインナーバッグ 軽量 撥水加工 ブラック",
-      "image": "https://m.media-amazon.com/images/I/41E3hMsqewL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B07JZX1H2D/?tag=amazonrankingbest-22",
+      "asin": "B0GGB8QDP5",
+      "title": "Lenovo ノートPC Windows11 バッテリー駆動17.4時間 83K700H6JP",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71VcnJWq1oL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GGB8QDP5/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "5位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 6,
-      "asin": "B0DTJ25HR3",
-      "title": "【整備済み品】 富士通 ノートパソコン LIFEBOOK U939 超軽量 薄型 ノートPC ■Win11搭載 / MS Office H&B 2019 / FHD(1920x1080)/第八世代 Core i5-8265U/8GBメモリ/SSD 256GB/Webカメラ内蔵/13.3インチ",
-      "image": "https://m.media-amazon.com/images/I/41r0jiC+ZyL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DTJ25HR3/?tag=amazonrankingbest-22",
-      "price": null,
+      "asin": "B0FBW522DV",
+      "title": "FMV ノートパソコン WA1-K2 スーパーマルチドライブ FMVWK2A175_AZ",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/51PlB3e9vuL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FBW522DV/?tag=amazonrankingbest-22",
+      "price": "¥135,700",
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "6位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 7,
-      "asin": "B0GGB4ZVTZ",
-      "title": "Lenovo ノートパソコン パソコン IdeaPad Slim 3 14.0インチ AMD Ryzen™ 7 8840HS メモリ16GB SSD512GB MS Office搭載 Windows11 バッテリー駆動12.6時間 重量1.39kg ルナグレー 83K90028JP ノートPC",
-      "image": "https://m.media-amazon.com/images/I/41TMfnHamRL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GGB4ZVTZ/?tag=amazonrankingbest-22",
-      "price": null,
+      "asin": "B0FW47TZRX",
+      "title": "FMV WE1-K3 ノートPC Copilotキー搭載 FMVWK3E15W_AZ",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/51G+1zcR5FL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FW47TZRX/?tag=amazonrankingbest-22",
+      "price": "¥108,800",
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "7位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 8,
-      "asin": "B0FWDCTLPY",
-      "title": "Apple 2025 MacBook Pro 10 コアCPU、10 コアGPU のM5 チップ搭載ノートパソコン：Apple Intelligence のために設計、14.2 インチLiquid Retina XDR ディスプレイ、24GB ユニファイドメモリ、1TBのSSD ストレージ - スペースブラック",
-      "image": "https://m.media-amazon.com/images/I/31Y+Mkpb3RL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FWDCTLPY/?tag=amazonrankingbest-22",
-      "price": null,
+      "asin": "B0GKMQTGWW",
+      "title": "Lenovo ThinkPad X1 Carbon ノートパソコン Office付き",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71+geQQY81L._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GKMQTGWW/?tag=amazonrankingbest-22",
+      "price": "¥53,820",
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "8位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 9,
-      "asin": "B0F4JWV77Y",
-      "title": "Lenovo ノートパソコン パソコン IdeaPad Slim 3 15.3インチ 第13世代 インテル® Core™ i5 プロセッサー搭載 13420H メモリ16GB SSD512GB MS Office 2024搭載 Windows11 バッテリー駆動16.9時間 重量1.59kg ルナグレー 83K100G4JP ノートPC",
-      "image": "https://m.media-amazon.com/images/I/41Plhg9+LCL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F4JWV77Y/?tag=amazonrankingbest-22",
-      "price": null,
+      "asin": "B0FXMJL93S",
+      "title": "【整備済み品】NEC 15.6型 Windows11 Office Celeron",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/71614T1NiIL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FXMJL93S/?tag=amazonrankingbest-22",
+      "price": "¥12,580",
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "9位",
+      "updatedAt": "2026-03-09"
     },
     {
       "rank": 10,
-      "asin": "B0FW4DGQVJ",
-      "title": "FMV 富士通 ノートパソコン Note A WA1-K2 (MS Office 2024/Copilotキー搭載/Win 11/15.6型/AMD Ryzen 5/16GB/SSD 512GB/スーパーマルチドライブ) FMVWK2A155_AZ",
-      "image": "https://m.media-amazon.com/images/I/41RKtxJhqiL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FW4DGQVJ/?tag=amazonrankingbest-22",
-      "price": null,
+      "asin": "B0GR6F619Z",
+      "title": "Apple MacBook Pro M4チップ 13インチ 8GBメモリ 512GB SSD",
+      "image": "https://images-fe.ssl-images-amazon.com/images/I/61svvKTKTlL._AC_UL600_SR600,400_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GR6F619Z/?tag=amazonrankingbest-22",
+      "price": "¥99,800",
       "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
+      "badge": "10位",
+      "updatedAt": "2026-03-09"
     }
   ]
 }

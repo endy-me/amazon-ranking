@@ -41,7 +41,7 @@ export default async function CategoryDatePage({ params }: Props) {
   if (dbRows.length === 0) notFound();
 
   let products: Product[] = dbRows.map((row) => ({
-    rank: row.rank,
+    rank: row.current_rank,
     asin: row.asin,
     title: row.title,
     image: row.image ?? "",
