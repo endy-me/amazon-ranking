@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#f97316"/>
+  <text x="32" y="28" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="13" fill="white">売れ筋</text>
+  <text x="32" y="48" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="22" fill="#fef08a">1位</text>
+</svg>

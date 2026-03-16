@@ -15,9 +15,16 @@ export const metadata: Metadata = {
   description:
     "PC・カメラ・スマホ・ゲーム・本など、Amazonで今売れている商品をジャンル別にランキング形式で紹介。最新の人気商品をチェックしよう。",
   openGraph: {
-    title: "Amazon 売れ筋ランキング",
-    description: "ジャンル別Amazonランキングをチェック",
+    title: "Amazon 売れ筋ランキング | ジャンル別人気商品まとめ",
+    description: "PC・カメラ・スマホ・ゲーム・本など、Amazonで今売れている商品をジャンル別にランキング形式で紹介。",
     type: "website",
+    locale: "ja_JP",
+    siteName: "Amazon 売れ筋ランキング",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amazon 売れ筋ランキング | ジャンル別人気商品まとめ",
+    description: "PC・カメラ・スマホ・ゲーム・本など、Amazonで今売れている商品をジャンル別にランキング形式で紹介。",
   },
 };
 
