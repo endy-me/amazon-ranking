@@ -1,0 +1,117 @@
+{
+  "slug": "books-engineering",
+  "name": "コンピュータ・IT",
+  "updatedAt": "2026-03-16",
+  "products": [
+    {
+      "rank": 1,
+      "asin": "4478119481",
+      "title": "AIを使って考えるための全技術 「最高の発想」を一瞬で生み出す56の技法",
+      "image": "https://m.media-amazon.com/images/I/51UzPTAPFSL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4478119481/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": "1位",
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 2,
+      "asin": "430100081X",
+      "title": "ドラゴンクエストVII Reimagined 公式ガイドブック (SE-MOOK)",
+      "image": "https://m.media-amazon.com/images/I/51sYHfo62EL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/430100081X/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 3,
+      "asin": "4297153548",
+      "title": "実践Claude Code入門―現場で活用するためのAIコーディングの思考法",
+      "image": "https://m.media-amazon.com/images/I/51kkd9SNiVL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4297153548/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 4,
+      "asin": "4046077735",
+      "title": "2億円を売り上げたプロが教える note×AI 最強の副業",
+      "image": "https://m.media-amazon.com/images/I/51U04zSOe5L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4046077735/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 5,
+      "asin": "4046079002",
+      "title": "がんばりすぎない絵の描き方 Ixyが教えるかわいい女の子のコツ",
+      "image": "https://m.media-amazon.com/images/I/51Jo0mtePUL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4046079002/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 6,
+      "asin": "4198661553",
+      "title": "２０３４　未来予測――AI（きみ）のいる明日",
+      "image": "https://m.media-amazon.com/images/I/41wW1hppv4L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4198661553/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 7,
+      "asin": "4297152754",
+      "title": "Claude CodeによるAI駆動開発入門",
+      "image": "https://m.media-amazon.com/images/I/41Ana0tBMIL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4297152754/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 8,
+      "asin": "4800593913",
+      "title": "GUGA公認　公式テキスト第４版対応版 生成ＡＩパスポート テキスト＆問題集",
+      "image": "https://m.media-amazon.com/images/I/41IoMzc2TtL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4800593913/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 9,
+      "asin": "4297154196",
+      "title": "LLMの原理、RAG・エージェント開発から読み解く　コンテキストエンジニアリング (エンジニア選書)",
+      "image": "https://m.media-amazon.com/images/I/51lM1yBw6vL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4297154196/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 10,
+      "asin": "4866222425",
+      "title": "「こうして日本人だけが騙される」マスコミが報じない「国際政治の舞台裏」",
+      "image": "https://m.media-amazon.com/images/I/51NNMt6WZCL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4866222425/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    }
+  ]
+}
