@@ -1,0 +1,117 @@
+{
+  "slug": "books-magazine",
+  "name": "雑誌",
+  "updatedAt": "2026-03-16",
+  "products": [
+    {
+      "rank": 1,
+      "asin": "B0GQ2QH1VG",
+      "title": "美的5月号",
+      "image": "https://m.media-amazon.com/images/I/41I63fy9GRL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GQ2QH1VG/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": "1位",
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 2,
+      "asin": "B0GRGZZ9ND",
+      "title": "sweet(スウィート) 2026年5月号",
+      "image": "https://m.media-amazon.com/images/I/51P1gkDwhSL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GRGZZ9ND/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 3,
+      "asin": "B0GS19YND5",
+      "title": "2026年MAQUIA（マキア）年6月号増刊",
+      "image": "https://m.media-amazon.com/images/I/41b14lYHGML._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GS19YND5/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 4,
+      "asin": "B0GRFG2K2J",
+      "title": "女性フィギュア START BOOK Vol.1（モデルグラフィックス2026年5月号別冊）：1/20 東雲うみ バニーガールStyle 特別付録",
+      "image": "https://m.media-amazon.com/images/I/51qRRYzcofL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GRFG2K2J/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 5,
+      "asin": "B0GS6V5NWY",
+      "title": "DM 王道WフルコンBOOK 2026年 04 月号 [雑誌]: 別冊コロコロコミック 増刊",
+      "image": "https://m.media-amazon.com/images/I/01MKUOLsA5L._SL500_.gif",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GS6V5NWY/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 6,
+      "asin": "4845867214",
+      "title": "J Movie Magazine Vol.129【表紙：宮舘涼太 ドラマ「ターミネーターと恋しちゃったら」】 (パーフェクト・メモワール)",
+      "image": "https://m.media-amazon.com/images/I/41u58t5vwyL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/4845867214/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 7,
+      "asin": "B0GPCZHFKR",
+      "title": "VOCE (2026年05月号)",
+      "image": "https://m.media-amazon.com/images/I/61rOx58wIWL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GPCZHFKR/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 8,
+      "asin": "B0GFVP7LYN",
+      "title": "LEE　2026年4月号",
+      "image": "https://m.media-amazon.com/images/I/51JwPiuSuxL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GFVP7LYN/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 9,
+      "asin": "B0GLFL7VJD",
+      "title": "anan(アンアン)2026/03/25号 No.2488[カラダが整う、不調改善ケア2026／永瀬廉]",
+      "image": "https://m.media-amazon.com/images/I/41vyULKrsqL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GLFL7VJD/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 10,
+      "asin": "B0GL88RKNF",
+      "title": "MonoMax(モノマックス) 2026年 4月号",
+      "image": "https://m.media-amazon.com/images/I/51jti3tTHmL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GL88RKNF/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    }
+  ]
+}
