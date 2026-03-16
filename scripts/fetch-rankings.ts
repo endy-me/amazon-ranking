@@ -54,7 +54,6 @@ const TOKEN_ENDPOINT = "https://api.amazon.co.jp/auth/o2/token";
 const API_ENDPOINT = "https://creatorsapi.amazon/catalog/v1/searchItems";
 const MARKETPLACE = "www.amazon.co.jp";
 const TODAY = new Date().toISOString().split("T")[0];
-const MAX_ITEMS = 20;
 const GENERATED_DIR = path.join(process.cwd(), "src/data/generated");
 const HISTORY_DIR = path.join(process.cwd(), "ranking-history", TODAY);
 
@@ -103,15 +102,15 @@ interface GeneratedProduct {
   updatedAt: string;
 }
 
-async function searchItems(config: { slug: string; name: string; searchIndex: string; browseNodeId: string }): Promise<GeneratedProduct[]> {
-  const token = await getAccessToken();
-
+async function fetchPage(token: string, config: { searchIndex: string; browseNodeId: string; keywords?: string }, page: number) {
   const body = {
     partnerTag: ASSOCIATE_TAG,
     partnerType: "Associates",
     searchIndex: config.searchIndex,
     ...(config.browseNodeId ? { browseNodeId: config.browseNodeId } : {}),
-    itemCount: MAX_ITEMS,
+    ...(config.keywords ? { keywords: config.keywords } : {}),
+    itemCount: 10,
+    itemPage: page,
     sortBy: "Featured",
     resources: [
       "itemInfo.title",
@@ -148,7 +147,16 @@ async function searchItems(config: { slug: string; name: string; searchIndex: st
     };
   };
 
-  const items = data.searchResult?.items ?? [];
+  return data.searchResult?.items ?? [];
+}
+
+async function searchItems(config: { slug: string; name: string; searchIndex: string; browseNodeId: string; keywords?: string }): Promise<GeneratedProduct[]> {
+  const token = await getAccessToken();
+
+  const page1 = await fetchPage(token, config, 1);
+  await new Promise((r) => setTimeout(r, 500));
+  const page2 = await fetchPage(token, config, 2);
+  const items = [...page1, ...page2];
 
   return items
     .map((item, i) => {
@@ -183,7 +191,7 @@ const CATEGORY_CONFIG = [
   { slug: "desktop",           name: "デスクトップPC",        searchIndex: "Computers",      browseNodeId: "2151949051" },
   { slug: "display",           name: "ディスプレイ",          searchIndex: "Computers",      browseNodeId: "2151982051" },
   { slug: "tablet",            name: "タブレット",            searchIndex: "Computers",      browseNodeId: "2152014051" },
-  { slug: "amazon-devices",    name: "Amazonデバイス",        searchIndex: "AmazonDevices",  browseNodeId: ""           },
+  { slug: "amazon-devices",    name: "Amazonデバイス",        searchIndex: "Electronics",    browseNodeId: "",           keywords: "Amazon Echo Fire Kindle" },
   // スマホ・ウォッチ
   { slug: "smartphone",        name: "スマートフォン",        searchIndex: "Electronics",    browseNodeId: "128188011"  },
   { slug: "smartwatch",        name: "スマートウォッチ",      searchIndex: "Electronics",    browseNodeId: "2725002051" },
@@ -205,7 +213,7 @@ function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-async function processCategory(config: { slug: string; name: string; searchIndex: string; browseNodeId: string }) {
+async function processCategory(config: { slug: string; name: string; searchIndex: string; browseNodeId: string; keywords?: string }) {
   console.log(`\n[${config.name}] 取得中...`);
   try {
     const products = await searchItems(config);
@@ -256,7 +264,7 @@ async function main() {
 
   for (const config of CATEGORY_CONFIG) {
     await processCategory(config);
-    await new Promise((r) => setTimeout(r, 800));
+    await new Promise((r) => setTimeout(r, 1500));
   }
 
   console.log("\n=== 完了 ===");

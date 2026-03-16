@@ -27,17 +27,6 @@
     },
     {
       "rank": 3,
-      "asin": "B0F78DZCM2",
-      "title": "Amazon Fire HD 10 キッズプロ (10インチ) ディズニー スティッチ エディション 対象年齢6歳から 数千点のキッズコンテンツが1年間使い放題",
-      "image": "https://m.media-amazon.com/images/I/414sdw6BYML._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F78DZCM2/?tag=amazonrankingbest-22",
-      "price": null,
-      "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
-    },
-    {
-      "rank": 4,
       "asin": "B0BL5M5C4K",
       "title": "Amazon Fire HD 10 タブレット - 10インチHD ディスプレイ 64GB ブラック",
       "image": "https://m.media-amazon.com/images/I/410SuEglKsL._SL500_.jpg",
@@ -48,7 +37,7 @@
       "updatedAt": "2026-03-16"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "asin": "B0CVDJ4JX6",
       "title": "Amazon Fire HD 8 タブレット - 持ち運びに便利な８インチ、外出先で動画もマンガも - 64GB ブラック",
       "image": "https://m.media-amazon.com/images/I/31SbAxXx8iL._SL500_.jpg",
@@ -59,7 +48,7 @@
       "updatedAt": "2026-03-16"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "asin": "B0CVDX4Q8T",
       "title": "Amazon Fire HD 8 キッズプロ (8インチ) プラネット / 3GB RAM 対象年齢6歳から | 数千点のキッズコンテンツが1年間使い放題",
       "image": "https://m.media-amazon.com/images/I/41Hvj+0PYiL._SL500_.jpg",
@@ -70,7 +59,7 @@
       "updatedAt": "2026-03-16"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "asin": "B0CRGKNXBZ",
       "title": "MoKoケース Amazon Kindle Fire HD 10 & 10 Plusタブレット(第13世代/第11世代、2023/2021年リリース)10.1インチ対応 - スリム折りたたみ式スタンドカバー 自動ウェイク/スリープ機能付き ブルー",
       "image": "https://m.media-amazon.com/images/I/51AmG5UpNJL._SL500_.jpg",
@@ -81,7 +70,7 @@
       "updatedAt": "2026-03-16"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "asin": "B09P1MQM9T",
       "title": "5M 電源延長ケーブル Wyze Cam、YI カメラ、Nest Cam、Blink、Netvue、Kasa Cam、クラウド カメラ、Furbo Dog、Arlo Q、USB - Micro USB 延長充電およびデータ同期コード用",
       "image": "https://m.media-amazon.com/images/I/31dppxvVjnL._SL500_.jpg",
@@ -92,7 +81,7 @@
       "updatedAt": "2026-03-16"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "asin": "B0CWMKGTD7",
       "title": "3MフラットマイクロUSBケーブル、充電とデータ同期、Wyze Nest Blinkカメラやその他のホームセキュリティカメラ用の3MマイクロUSBコード（ホワイト）",
       "image": "https://m.media-amazon.com/images/I/41DOCeGNxGL._SL500_.jpg",
@@ -103,11 +92,132 @@
       "updatedAt": "2026-03-16"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "asin": "B0CDX3T97Z",
       "title": "5m マイクロ USB 電源延長ケーブル、ホームセキュリティカメラ用 (Wyze Cam、Kasa Cam、Yi Cam、Nest Cam、Blink、Furbo Dog など)、USB A - マイクロ USB 耐久性充電およびデータ同期コード - ホワイト",
       "image": "https://m.media-amazon.com/images/I/311nH-Hdi3L._SL500_.jpg",
       "affiliateUrl": "https://www.amazon.co.jp/dp/B0CDX3T97Z/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 10,
+      "asin": "B0FL26KNGJ",
+      "title": "usbケーブル 10M micro usb 電源ケーブル USBAオス-micro Bメス 充電ケーブル 電源コード 防犯カメラ給電 Wyze Cam v3/Kasa Cam Indoor/Amazon Cloud Camera/Echo Dot Kid Edition/Fire Kindle/Arlo Q/NestCam Indoor/Blink用 USB充電電源コード",
+      "image": "https://m.media-amazon.com/images/I/31XVdt5ur9L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FL26KNGJ/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 11,
+      "asin": "B0F2MJC874",
+      "title": "MoKo 10.1インチAmazon Kindle Fire HD 10 & 10 Plusタブレット用ケース(第13世代/第11世代、2023/2021年リリース)、自動ウェイク/スリープ機能付きスリム折りたたみスタンドカバー、ローズゴールド",
+      "image": "https://m.media-amazon.com/images/I/51CdXGSgPUL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F2MJC874/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 12,
+      "asin": "B0GHWJS6G6",
+      "title": "VACCU 1.5m キンドル用 Micro USB充電ケーブル",
+      "image": "https://m.media-amazon.com/images/I/517PTw+AmPL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GHWJS6G6/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 13,
+      "asin": "B0GHRJKJQR",
+      "title": "Superer Micro USB & Type C 2イン1充電ケーブル Amazon Old & New Kindle用 Paperwhite & Oasis E-Reader、Fire HDタブレット&Echo Dot ナイロン編組充電コード 電源アダプター ブラック",
+      "image": "https://m.media-amazon.com/images/I/41Y1WsbnCUL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GHRJKJQR/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 14,
+      "asin": "B0G7F2Q5K2",
+      "title": "交換用マイクロUSBケーブル高速充電ケーブル、Samsung Galaxy 7 S6 S7 Edge携帯電話充電ケーブルタブレット、Kindle Fire(6フィート)に対応。",
+      "image": "https://m.media-amazon.com/images/I/310mPzlP9KL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0G7F2Q5K2/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 15,
+      "asin": "B0G7DGJWKJ",
+      "title": "交換 Micro USB ケーブル 速い充電ケーブル互換性がありサムスンギャラクシー 7 S6 S7 エッジ携帯電話充電器ケーブルタブレット、Kindle Fire White（1.8m）",
+      "image": "https://m.media-amazon.com/images/I/310mPzlP9KL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0G7DGJWKJ/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 16,
+      "asin": "B0FPD92HMC",
+      "title": "2本パック 10フィート マイクロUSB電源ケーブル Amazon Fire TV Stick用 Roku Streaming Stick Express Plus Premier Plus Voice Remote Pro Chromecast 充電ケーブル Kindle Fire 10タブレット用 Firestick コードロング",
+      "image": "https://m.media-amazon.com/images/I/4138XSLw++L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FPD92HMC/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 17,
+      "asin": "B0F52J5YNH",
+      "title": "MoKoケース Kindle Fire HD 10 & 10 Plusタブレット(第13世代/第11世代、2023/2021年リリース)10.1インチ対応 - スリム折りたたみ式スタンドカバー 自動ウェイク/スリープ機能付き アプリコットブロッサム",
+      "image": "https://m.media-amazon.com/images/I/61FFj9vOv6S._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F52J5YNH/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 18,
+      "asin": "B0CMPZZJ4Q",
+      "title": "MoKoケース Amazon Kindle Fire Max 11タブレット(第13世代、2023年発売)11インチ対応 - スリムPUレザー三つ折りスタンドカバー Fire 11タブレット用 つや消しハードバックシェル 自動ウェイク/スリープ機能付き ライトグレー",
+      "image": "https://m.media-amazon.com/images/I/31SSHA+8v+L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0CMPZZJ4Q/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 19,
+      "asin": "B0CDBB54MX",
+      "title": "MoKoケース Amazon Fire Max 11タブレット(第13世代、2023年リリース)11インチ対応 - スリムPUレザー三つ折りスタンドカバー Kindle Fire 11タブレット用 つや消しハードバックシェル 自動ウェイク/スリープ機能付き ブラック&ピンク",
+      "image": "https://m.media-amazon.com/images/I/51nDwJ3HpTL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0CDBB54MX/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-16"
+    },
+    {
+      "rank": 20,
+      "asin": "B0CDB7C8PN",
+      "title": "MoKoケース Amazon Fire Max 11タブレット(第13世代、2023年発売)11インチ対応 - スリムPUレザー三つ折りスタンドカバー Kindle Fire 11タブレット用 つや消しハードバックシェル 自動ウェイク/スリープ機能付き グレーフォレスト",
+      "image": "https://m.media-amazon.com/images/I/51dlb10x+DL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0CDB7C8PN/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
       "badge": null,
