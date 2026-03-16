@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-16">
@@ -14,7 +16,23 @@ export function Footer() {
           <p className="text-xs text-gray-400 mt-4">
             掲載商品の価格・在庫は変動します。購入前にAmazonで最新情報をご確認ください。
           </p>
-          <p className="text-xs text-gray-400 mt-2">
+          <nav className="flex items-center justify-center gap-4 mt-5 flex-wrap">
+            <Link href="/about" className="text-xs text-gray-500 hover:text-orange-500 transition-colors">
+              運営者について
+            </Link>
+            <Link href="/privacy" className="text-xs text-gray-500 hover:text-orange-500 transition-colors">
+              プライバシーポリシー
+            </Link>
+            <a
+              href="https://docs.google.com/forms/d/1Wa15qcwCD75d0-PHjqYZnm7wI00kQPBJE2T4n3TzoF4/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-gray-500 hover:text-orange-500 transition-colors"
+            >
+              お問い合わせ
+            </a>
+          </nav>
+          <p className="text-xs text-gray-400 mt-4">
             © {new Date().getFullYear()} Amazon売れ筋ランキング
           </p>
         </div>
