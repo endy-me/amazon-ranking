@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { categories, getCategoryBySlug } from "@/data/categories";
 import { getProductsBySlug } from "@/data/products";
 import { getRankingWithTrend, getAvailableDates, isDbAvailable } from "@/lib/db";
+import { getAvailableDatesFromHistory } from "@/lib/ranking-history";
 import { ProductCard } from "@/components/ProductCard";
 import { RankingHistoryNav } from "@/components/RankingHistoryNav";
 import { Product } from "@/types";
@@ -60,8 +61,16 @@ export default async function CategoryPage({ params }: Props) {
 
   products = mergeEditorPicks(products);
 
-  // 過去日付一覧（DBがある場合のみ、最新日を除いた過去分）
-  const availableDates = hasDbData ? (await getAvailableDates(slug)).slice(1) : [];
+  // 過去日付一覧（Supabase優先、なければ ranking-history/ から取得）
+  let availableDates: string[] = [];
+  if (hasDbData) {
+    availableDates = (await getAvailableDates(slug)).slice(1);
+  }
+  if (availableDates.length === 0) {
+    // ranking-history/ から取得し、最新日（今日表示中）を除く
+    const historyDates = getAvailableDatesFromHistory(slug);
+    availableDates = historyDates.slice(1);
+  }
 
   const updatedAt = products[0]?.updatedAt ?? "";
 

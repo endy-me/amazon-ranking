@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getCategoryBySlug } from "@/data/categories";
 import { getRankingByDate, isDbAvailable } from "@/lib/db";
+import { getRankingFromHistory } from "@/lib/ranking-history";
 import { ProductCard } from "@/components/ProductCard";
 import { mergeEditorPicks } from "@/lib/editor-picks";
 import { Product } from "@/types";
@@ -35,21 +36,31 @@ export default async function CategoryDatePage({ params }: Props) {
 
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) notFound();
 
-  if (!(await isDbAvailable())) notFound();
+  let products: Product[] | null = null;
 
-  const dbRows = await getRankingByDate(slug, date);
-  if (dbRows.length === 0) notFound();
+  // Supabase から取得を試みる
+  if (await isDbAvailable()) {
+    const dbRows = await getRankingByDate(slug, date);
+    if (dbRows.length > 0) {
+      products = dbRows.map((row) => ({
+        rank: row.current_rank,
+        asin: row.asin,
+        title: row.title,
+        image: row.image ?? "",
+        affiliateUrl: `https://www.amazon.co.jp/dp/${row.asin}/?tag=amazonrankingbest-22`,
+        price: row.price ?? undefined,
+        updatedAt: date,
+        rankChange: null,
+      }));
+    }
+  }
 
-  let products: Product[] = dbRows.map((row) => ({
-    rank: row.current_rank,
-    asin: row.asin,
-    title: row.title,
-    image: row.image ?? "",
-    affiliateUrl: `https://www.amazon.co.jp/dp/${row.asin}/?tag=amazonrankingbest-22`,
-    price: row.price ?? undefined,
-    updatedAt: date,
-    rankChange: null,
-  }));
+  // Supabase にデータがなければ ranking-history/ から読む
+  if (!products) {
+    products = getRankingFromHistory(slug, date);
+  }
+
+  if (!products || products.length === 0) notFound();
 
   products = mergeEditorPicks(products);
 
