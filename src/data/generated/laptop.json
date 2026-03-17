@@ -1,7 +1,7 @@
 {
   "slug": "laptop",
   "name": "ノートPC",
-  "updatedAt": "2026-03-16",
+  "updatedAt": "2026-03-17",
   "products": [
     {
       "rank": 1,
@@ -12,7 +12,7 @@
       "price": null,
       "description": null,
       "badge": "1位",
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 2,
@@ -23,18 +23,18 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 3,
-      "asin": "B0FQ6PCF9R",
-      "title": "HP ノートパソコン 15-fd 15.6インチ インテル Core Ultra 5 125H メモリ16GB SSD512GB Windows 11 Microsoft Office 2024搭載 WPS Office搭載 カメラシャッター 指紋認証 薄型 Copilotキー搭載 ナチュラルシルバー (BJ0M7PA-AAAF)",
-      "image": "https://m.media-amazon.com/images/I/41ThMHxrCSL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FQ6PCF9R/?tag=amazonrankingbest-22",
+      "asin": "B0DTJ25HR3",
+      "title": "【整備済み品】 富士通 ノートパソコン LIFEBOOK U939 超軽量 薄型 ノートPC ■Win11搭載 / MS Office H&B 2019 / FHD(1920x1080)/第八世代 Core i5-8265U/8GBメモリ/SSD 256GB/Webカメラ内蔵/13.3インチ",
+      "image": "https://m.media-amazon.com/images/I/41r0jiC+ZyL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DTJ25HR3/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 4,
@@ -45,43 +45,21 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 5,
-      "asin": "B0DTJ25HR3",
-      "title": "【整備済み品】 富士通 ノートパソコン LIFEBOOK U939 超軽量 薄型 ノートPC ■Win11搭載 / MS Office H&B 2019 / FHD(1920x1080)/第八世代 Core i5-8265U/8GBメモリ/SSD 256GB/Webカメラ内蔵/13.3インチ",
-      "image": "https://m.media-amazon.com/images/I/41r0jiC+ZyL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DTJ25HR3/?tag=amazonrankingbest-22",
+      "asin": "B0FQ6PCF9R",
+      "title": "HP ノートパソコン 15-fd 15.6インチ インテル Core Ultra 5 125H メモリ16GB SSD512GB Windows 11 Microsoft Office 2024搭載 WPS Office搭載 カメラシャッター 指紋認証 薄型 Copilotキー搭載 ナチュラルシルバー (BJ0M7PA-AAAF)",
+      "image": "https://m.media-amazon.com/images/I/41ThMHxrCSL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FQ6PCF9R/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 6,
-      "asin": "B0GGB4ZVTZ",
-      "title": "Lenovo ノートパソコン パソコン IdeaPad Slim 3 14.0インチ AMD Ryzen™ 7 8840HS メモリ16GB SSD512GB MS Office搭載 Windows11 バッテリー駆動12.6時間 重量1.39kg ルナグレー 83K90028JP ノートPC",
-      "image": "https://m.media-amazon.com/images/I/41TMfnHamRL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GGB4ZVTZ/?tag=amazonrankingbest-22",
-      "price": null,
-      "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
-    },
-    {
-      "rank": 7,
-      "asin": "B0FWDCTLPY",
-      "title": "Apple 2025 MacBook Pro 10 コアCPU、10 コアGPU のM5 チップ搭載ノートパソコン：Apple Intelligence のために設計、14.2 インチLiquid Retina XDR ディスプレイ、24GB ユニファイドメモリ、1TBのSSD ストレージ - スペースブラック",
-      "image": "https://m.media-amazon.com/images/I/31Y+Mkpb3RL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FWDCTLPY/?tag=amazonrankingbest-22",
-      "price": null,
-      "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
-    },
-    {
-      "rank": 8,
       "asin": "B0F4JWV77Y",
       "title": "Lenovo ノートパソコン パソコン IdeaPad Slim 3 15.3インチ 第13世代 インテル® Core™ i5 プロセッサー搭載 13420H メモリ16GB SSD512GB MS Office 2024搭載 Windows11 バッテリー駆動16.9時間 重量1.59kg ルナグレー 83K100G4JP ノートPC",
       "image": "https://m.media-amazon.com/images/I/41Plhg9+LCL._SL500_.jpg",
@@ -89,7 +67,29 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 7,
+      "asin": "B0GGB4ZVTZ",
+      "title": "Lenovo ノートパソコン パソコン IdeaPad Slim 3 14.0インチ AMD Ryzen™ 7 8840HS メモリ16GB SSD512GB MS Office搭載 Windows11 バッテリー駆動12.6時間 重量1.39kg ルナグレー 83K90028JP ノートPC",
+      "image": "https://m.media-amazon.com/images/I/41TMfnHamRL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GGB4ZVTZ/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 8,
+      "asin": "B0FWDCTLPY",
+      "title": "Apple 2025 MacBook Pro 10 コアCPU、10 コアGPU のM5 チップ搭載ノートパソコン：Apple Intelligence のために設計、14.2 インチLiquid Retina XDR ディスプレイ、24GB ユニファイドメモリ、1TBのSSD ストレージ - スペースブラック",
+      "image": "https://m.media-amazon.com/images/I/31Y+Mkpb3RL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FWDCTLPY/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 9,
@@ -100,7 +100,7 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 10,
@@ -111,21 +111,10 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 11,
-      "asin": "B0G6D2SCX6",
-      "title": "【Amazon.co.jp限定】 ASUS ノートパソコン Zenbook S 14 UX5406SA 14型 インテル Core Ultra 7 258V メモリ 32GB SSD 512GB Microsoft 365 Personal (24か月版) 搭載 Windows 11 バッテリー駆動 19.7時間 顔認証 Copilot+PC スマイアグレー UX5406SA-U7325GRS",
-      "image": "https://m.media-amazon.com/images/I/41Ny31D9eeL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0G6D2SCX6/?tag=amazonrankingbest-22",
-      "price": null,
-      "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
-    },
-    {
-      "rank": 12,
       "asin": "B0DR5D4NGT",
       "title": "【整備済み品】富士通 ノートパソコン LIFEBOOK U9310 13.3型FHD(1920x1080) 超軽薄 ノートPC/第10世代 Core i5-10310U＠1.7GHz/ 8GB メモリ/高速ストレージ SSD/Webカメラ/WIFI/Type-C/HDMI/win11&MS Office 2019 搭載 ビジネス 在宅勤務向け パソコン (メモリ：8GB／SSD：256GB)",
       "image": "https://m.media-amazon.com/images/I/41XbbaQyJ1L._SL500_.jpg",
@@ -133,7 +122,18 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 12,
+      "asin": "B0G6D2SCX6",
+      "title": "【Amazon.co.jp限定】 ASUS ノートパソコン Zenbook S 14 UX5406SA 14型 インテル Core Ultra 7 258V メモリ 32GB SSD 512GB Microsoft 365 Personal (24か月版) 搭載 Windows 11 バッテリー駆動 19.7時間 顔認証 Copilot+PC スマイアグレー UX5406SA-U7325GRS",
+      "image": "https://m.media-amazon.com/images/I/41Ny31D9eeL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0G6D2SCX6/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 13,
@@ -144,43 +144,21 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 14,
-      "asin": "B0GRG6D3P4",
-      "title": "【Win11、MS Office H＆B 2024搭載】Lenovo ThinkPad X13 / 13.3インチ ノートパソコン/CPU:Core i5 / メモリ:16GB / SSD:256GB / Webカメラ内蔵/HDMI、USB Type-C端子/フルHD/無線マウス付属 (整備済み品)",
-      "image": "https://m.media-amazon.com/images/I/41cNks5J6GL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GRG6D3P4/?tag=amazonrankingbest-22",
+      "asin": "B0GKMQTGWW",
+      "title": "【整備済み品】 Lenovo ThinkPad X1 Carbon 14型 ノートパソコン Win11 MS Office 2024搭載 CPU:Core i5 メモリ:16GB SSD:256GB Webカメラ内蔵 IPS液晶 FHD（1920x1080） HDMI USB Type-C端子 無線マウス付属",
+      "image": "https://m.media-amazon.com/images/I/41t9WojpuML._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0GKMQTGWW/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
       "rank": 15,
-      "asin": "B0FSJPYGZY",
-      "title": "【Amazon.co.jp限定】 ASUS ゲーミングノートPC TUF Gaming F16 FX608JMR 16インチ RTX 5060 インテル Core i5 14450HX メモリ 32GB SSD 512GB リフレッシュレート165Hz イルミネートキーボード Windows 11 重量 2.3kg 動画編集 イェーガーグレー FX608JMR-I5R5060A",
-      "image": "https://m.media-amazon.com/images/I/41Ea263xB7L._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FSJPYGZY/?tag=amazonrankingbest-22",
-      "price": null,
-      "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
-    },
-    {
-      "rank": 16,
-      "asin": "B0F9FB5HLQ",
-      "title": "NEC LAVIE 国内生産 ノートパソコン 25夏 N15Slim 15.3 型 AMD Ryzen™ 7 7735HS メモリ16GB SSD512GB MS Office 2024搭載 Windows11 バッテリー駆動13.8時間 重量1.6kg ルナグレー",
-      "image": "https://m.media-amazon.com/images/I/417+rUKo7WL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F9FB5HLQ/?tag=amazonrankingbest-22",
-      "price": null,
-      "description": null,
-      "badge": null,
-      "updatedAt": "2026-03-16"
-    },
-    {
-      "rank": 17,
       "asin": "B086ZTPCC5",
       "title": "ASUS Chromebook クロームブック Detachable CM30 10.5インチ 2in1 タブレット 日本語キーボード 8GBメモリ 重量609g ペン付き フォグシルバー CM3001DM2A-R70006/A",
       "image": "https://m.media-amazon.com/images/I/41Qz9NJfwaL._SL500_.jpg",
@@ -188,21 +166,32 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
-      "rank": 18,
-      "asin": "B0F3H88T8L",
-      "title": "【Amazon.co.jp限定】 ASUS ノートパソコン Vivobook 15 X1502VA 15.6インチ インテル Core i7 13620H メモリ16GB SSD 1TB MS Office 2024搭載 Windows 11 バッテリー駆動 8.9時間 重量1.7kg PC Game Pass 3ヶ月利用権付き クワイエットブルー X1502VA-I7H161WS",
-      "image": "https://m.media-amazon.com/images/I/41dwbHqOx8L._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F3H88T8L/?tag=amazonrankingbest-22",
+      "rank": 16,
+      "asin": "B0FSJPYGZY",
+      "title": "【Amazon.co.jp限定】 ASUS ゲーミングノートPC TUF Gaming F16 FX608JMR 16インチ RTX 5060 インテル Core i5 14450HX メモリ 32GB SSD 512GB リフレッシュレート165Hz イルミネートキーボード Windows 11 重量 2.3kg 動画編集 イェーガーグレー FX608JMR-I5R5060A",
+      "image": "https://m.media-amazon.com/images/I/41Ea263xB7L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FSJPYGZY/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
-      "rank": 19,
+      "rank": 17,
+      "asin": "B0F9FB5HLQ",
+      "title": "NEC LAVIE 国内生産 ノートパソコン 25夏 N15Slim 15.3 型 AMD Ryzen™ 7 7735HS メモリ16GB SSD512GB MS Office 2024搭載 Windows11 バッテリー駆動13.8時間 重量1.6kg ルナグレー",
+      "image": "https://m.media-amazon.com/images/I/417+rUKo7WL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F9FB5HLQ/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 18,
       "asin": "B0G57S1PC3",
       "title": "【整備済み品】中古ノートパソコン 東芝Bシリーズ B55/B65 Windows11搭載 Core i5-6200U /メモリ8GB/SSD128GB/15.6インチ/Bluetooth/WIFI/HDMI/USB3.0/DVDドライブ/MS & Office2019/テンキー搭載/仕事用ノート (Bシリーズi5-6/メモリ8GB/SSD128GB)",
       "image": "https://m.media-amazon.com/images/I/51eylSGEyjL._SL500_.jpg",
@@ -210,18 +199,29 @@
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
     },
     {
-      "rank": 20,
-      "asin": "B0G6CFC2Z2",
-      "title": "【Amazon.co.jp限定】ASUS ノートパソコン Vivobook 15 M1502NAQ 15.6インチ AMD Ryzen 7 170 メモリ16GB SSD 512GB Windows 11 重量1.7kg Wi-Fi 6E クワイエットブルー M1502NAQ-R7165BUW",
-      "image": "https://m.media-amazon.com/images/I/41a2RBSEOuL._SL500_.jpg",
-      "affiliateUrl": "https://www.amazon.co.jp/dp/B0G6CFC2Z2/?tag=amazonrankingbest-22",
+      "rank": 19,
+      "asin": "B0F3H88T8L",
+      "title": "【Amazon.co.jp限定】 ASUS ノートパソコン Vivobook 15 X1502VA 15.6インチ インテル Core i7 13620H メモリ16GB SSD 1TB MS Office 2024搭載 Windows 11 バッテリー駆動 8.9時間 重量1.7kg PC Game Pass 3ヶ月利用権付き クワイエットブルー X1502VA-I7H161WS",
+      "image": "https://m.media-amazon.com/images/I/41dwbHqOx8L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0F3H88T8L/?tag=amazonrankingbest-22",
       "price": null,
       "description": null,
       "badge": null,
-      "updatedAt": "2026-03-16"
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 20,
+      "asin": "B0BBFZK2NZ",
+      "title": "ESBOOKノートパソコン 【MS Office 2024搭載&Windows 11 Pro】14インチIPS液晶/1920×1080FHDディスプレイ カメラ付き/薄型PCノート高性能CPU/初期設定不要/8Gメモリ/無線LAN/大容量SSD/初心者向け・パソコンノート/日本語キーボードフィルム付き/ワイヤレスマウス付き(256G SSD, ローズゴールド)",
+      "image": "https://m.media-amazon.com/images/I/41viiXMlM1L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0BBFZK2NZ/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
     }
   ]
 }
