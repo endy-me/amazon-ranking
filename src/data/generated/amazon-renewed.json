@@ -1,0 +1,227 @@
+{
+  "slug": "amazon-renewed",
+  "name": "Amazon整備済み品",
+  "updatedAt": "2026-03-17",
+  "products": [
+    {
+      "rank": 1,
+      "asin": "B0CCV3Q5V3",
+      "title": "Lenovo Chromebook クロームブック IdeaPad Flex 3i Gen8 12.2インチ インテル® プロセッサー N100搭載 メモリ4GB eMMC 64GB バッテリー駆動12.0時間 重量1.25kg アビスブルー 82XH001KJP",
+      "image": "https://m.media-amazon.com/images/I/41kY2cr8ooL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0CCV3Q5V3/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": "1位",
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 2,
+      "asin": "B0BKPLH9MM",
+      "title": "【整備済み品】 Apple iPad (第９世代) Wi-Fi 64GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/31LEo+ZDcWL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0BKPLH9MM/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 3,
+      "asin": "B0956Y4RH2",
+      "title": "【整備済み品】 Apple iPad (第７世代) Wi-Fi 32GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/41ZdCrLRUvL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0956Y4RH2/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 4,
+      "asin": "B08TWWP78S",
+      "title": "【整備済み品】 Apple iPad (第８世代) Wi-Fi 32GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/31k01m5H2xL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B08TWWP78S/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 5,
+      "asin": "B0BKPJNXSX",
+      "title": "【整備済み品】 Apple iPad (第９世代) Wi-Fi + Cellular 64GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/31LEo+ZDcWL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0BKPJNXSX/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 6,
+      "asin": "B0BM8JF9FK",
+      "title": "【整備済み品】 Apple iPad 2022 10.9インチ (第10世代) Wi-Fi 64GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/31Wj0j4RXhL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0BM8JF9FK/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 7,
+      "asin": "B08TWWPC33",
+      "title": "【整備済み品】 Apple iPad Air (第４世代) Wi-Fi 64GB スカイブルー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/41wuWNK3GGL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B08TWWPC33/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 8,
+      "asin": "B0BKPRVNCX",
+      "title": "【整備済み品】 Apple iPad mini (第６世代) Wi-Fi 64GB パープル (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/41GDDz8UImL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0BKPRVNCX/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 9,
+      "asin": "B0956DVRNF",
+      "title": "【整備済み品】Apple iPad (第７世代) Wi-Fi + Cellular 32GB シルバー",
+      "image": "https://m.media-amazon.com/images/I/41ZdCrLRUvL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0956DVRNF/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 10,
+      "asin": "B0DL5LWQ52",
+      "title": "【整備済み品】 NEC 15.6型 ノートPC VX-V/ノートパソコン/Windows 11 /MS Office H&B 2019/第七世代 Core i3-7100U / HDMI/WIFI/8GB/SSD 256GB",
+      "image": "https://m.media-amazon.com/images/I/41aTRc-O17L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DL5LWQ52/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 11,
+      "asin": "B0956XXWTG",
+      "title": "【整備済み品】 Apple iPad (第８世代) Wi-Fi + Cellular 32GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/31bmVI6uynL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0956XXWTG/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 12,
+      "asin": "B096F19ZC6",
+      "title": "【整備済み品】 Apple MacBook Air M1 2020(13インチAir,8GB RAM,256GB SSD,8コアCPU/7コアGPU) シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/31hNoqqJONS._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B096F19ZC6/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 13,
+      "asin": "B0956NP6GN",
+      "title": "【整備済み品】 Apple iPad (第６世代) Wi-Fi + Cellular 32GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/311IaJfjFaL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0956NP6GN/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 14,
+      "asin": "B0BCNXNZ7N",
+      "title": "【整備済み品】 Apple iPad Air (第５世代) Wi-Fi 64GB ブルー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/41-+36gPjxL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0BCNXNZ7N/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 15,
+      "asin": "B09LD469FN",
+      "title": "【整備済み品】【Microsoft Office2019＆Win11搭載】超軽量Panasonic Let's note CF-SZ6■第7世代 Intel Core i5-7200U＠2.5GHz/メモリ8GB/",
+      "image": "https://m.media-amazon.com/images/I/51LSSMVN9OL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B09LD469FN/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 16,
+      "asin": "B0FWJXQHK6",
+      "title": "【整備済み品】富士通 ARROWS Tab Q5010｜10.1型 WUXGA（1920×1200）タブレットPC｜intel 第九世代Celeron N4020/4GB/64GB｜Windows 11 Pro｜USB Type-C充電｜Wi-Fi｜microSD対応（最大64GB）",
+      "image": "https://m.media-amazon.com/images/I/416RNuvJRCL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0FWJXQHK6/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 17,
+      "asin": "B0BKPLQ3JH",
+      "title": "【整備済み品】 Apple iPad mini (第６世代) Wi-Fi + Cellular 256GB スターライト (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/41F8caJ7BvL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0BKPLQ3JH/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 18,
+      "asin": "B0CZSYDR5H",
+      "title": "【整備済み品】 ノートパソコン Let's note CF-SV7 軽量化 Windows 11 & Office 2019搭載 ノートPC 12.1インチ WUXGA(1920×1200) 第8世代Core i5-8250U/メモリ 8GB/SSD 256GB/WIFI/WEBカメラ搭載 sousia整備済み レッツノート パソコン",
+      "image": "https://m.media-amazon.com/images/I/51gbQ4kxWXL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0CZSYDR5H/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 19,
+      "asin": "B0956X42S9",
+      "title": "【整備済み品】 Apple iPad mini (第５世代) Wi-Fi + Cellular 64GB シルバー (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/517+oAYQlWL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0956X42S9/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 20,
+      "asin": "B0DW7PJK6H",
+      "title": "【整備済み品】Apple iPad Air 11 インチ (M2) Wi-Fi 128GB パープル (整備済み品)",
+      "image": "https://m.media-amazon.com/images/I/41KS32VY7XL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DW7PJK6H/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    }
+  ]
+}

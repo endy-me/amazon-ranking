@@ -14,6 +14,11 @@ const colorMap: Record<string, { bg: string; border: string; text: string; btn: 
   pink:   { bg: "bg-pink-50",   border: "border-pink-100",   text: "text-pink-700",   btn: "bg-pink-600 hover:bg-pink-700" },
   indigo: { bg: "bg-indigo-50", border: "border-indigo-100", text: "text-indigo-700", btn: "bg-indigo-600 hover:bg-indigo-700" },
   gray:   { bg: "bg-gray-50",   border: "border-gray-200",   text: "text-gray-700",   btn: "bg-gray-700 hover:bg-gray-800" },
+  violet:  { bg: "bg-violet-50",  border: "border-violet-100",  text: "text-violet-700",  btn: "bg-violet-600 hover:bg-violet-700" },
+  amber:   { bg: "bg-amber-50",   border: "border-amber-100",   text: "text-amber-700",   btn: "bg-amber-600 hover:bg-amber-700" },
+  fuchsia: { bg: "bg-fuchsia-50", border: "border-fuchsia-100", text: "text-fuchsia-700", btn: "bg-fuchsia-600 hover:bg-fuchsia-700" },
+  emerald: { bg: "bg-emerald-50", border: "border-emerald-100", text: "text-emerald-700", btn: "bg-emerald-600 hover:bg-emerald-700" },
+  lime:    { bg: "bg-lime-50",    border: "border-lime-100",    text: "text-lime-700",    btn: "bg-lime-600 hover:bg-lime-700" },
 };
 
 interface CategoryCardProps {

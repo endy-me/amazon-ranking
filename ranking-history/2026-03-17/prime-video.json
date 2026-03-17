@@ -1,0 +1,40 @@
+{
+  "slug": "prime-video",
+  "name": "プライムビデオ",
+  "updatedAt": "2026-03-17",
+  "products": [
+    {
+      "rank": 1,
+      "asin": "B0DNPJ5MRC",
+      "title": "SHINING SONG",
+      "image": "https://m.media-amazon.com/images/I/51U92Ug026L._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B0DNPJ5MRC/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": "1位",
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 2,
+      "asin": "B00OJN2NQ8",
+      "title": "パガニーニ 愛と狂気のヴァイオリニスト(通常盤DVD)",
+      "image": "https://m.media-amazon.com/images/I/51FBPuHTkgL._SL500_.jpg",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B00OJN2NQ8/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    },
+    {
+      "rank": 3,
+      "asin": "B004OQJSFO",
+      "title": "The Next Three Days [Region 2]",
+      "image": "https://m.media-amazon.com/images/I/01MKUOLsA5L._SL500_.gif",
+      "affiliateUrl": "https://www.amazon.co.jp/dp/B004OQJSFO/?tag=amazonrankingbest-22",
+      "price": null,
+      "description": null,
+      "badge": null,
+      "updatedAt": "2026-03-17"
+    }
+  ]
+}

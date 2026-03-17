@@ -31,4 +31,9 @@ export type CategoryColor =
   | "pink"
   | "indigo"
   | "teal"
-  | "gray";
+  | "gray"
+  | "violet"
+  | "amber"
+  | "fuchsia"
+  | "emerald"
+  | "lime";
