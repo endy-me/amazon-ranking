@@ -104,9 +104,9 @@ export const categories: Category[] = [
   },
   {
     slug: "dvd",
-    name: "DVD・ブルーレイ",
-    description: "映画・ドラマ・アニメのDVD・Blu-ray",
-    icon: "📀",
+    name: "CD・DVD",
+    description: "人気アーティストのCD・Blu-ray・ミュージックビデオ",
+    icon: "🎵",
     color: "violet",
   },
   // 本
