@@ -11,6 +11,7 @@ export interface Product {
   rankChange?: number | null; // 正数=上昇, 負数=下降, null=初登場
   editorRating?: number;   // 1〜5
   editorComment?: string;  // 中の人コメント
+  editorUrl?: string;      // ブログ記事などのURL
 }
 
 export interface Category {

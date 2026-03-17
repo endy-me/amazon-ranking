@@ -1,9 +1,10 @@
 interface EditorCommentProps {
   rating?: number;
   comment?: string;
+  url?: string;
 }
 
-export function EditorComment({ rating, comment }: EditorCommentProps) {
+export function EditorComment({ rating, comment, url }: EditorCommentProps) {
   if (!comment) return null;
 
   const stars = rating ?? 0;
@@ -17,6 +18,16 @@ export function EditorComment({ rating, comment }: EditorCommentProps) {
         </span>
       </div>
       <p className="text-xs text-amber-900 leading-relaxed">{comment}</p>
+      {url && (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-1.5 text-xs text-amber-700 font-medium hover:underline"
+        >
+          📝 詳しく読む →
+        </a>
+      )}
     </div>
   );
 }

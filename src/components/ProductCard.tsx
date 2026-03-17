@@ -76,7 +76,7 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
             )}
           </div>
         </div>
-        <EditorComment rating={product.editorRating} comment={product.editorComment} />
+        <EditorComment rating={product.editorRating} comment={product.editorComment} url={product.editorUrl} />
         <a
           href={product.affiliateUrl}
           target="_blank"

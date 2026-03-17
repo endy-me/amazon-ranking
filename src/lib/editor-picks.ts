@@ -4,6 +4,7 @@ import { Product } from "@/types";
 interface EditorPick {
   rating: number;
   comment: string;
+  url?: string;
 }
 
 const picks = editorPicksData as unknown as Record<string, EditorPick>;
@@ -16,6 +17,7 @@ export function mergeEditorPicks(products: Product[]): Product[] {
       ...p,
       editorRating: pick.rating,
       editorComment: pick.comment,
+      editorUrl: pick.url,
     };
   });
 }
