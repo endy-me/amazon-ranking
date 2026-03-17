@@ -25,7 +25,7 @@ export function EditorComment({ rating, comment, url }: EditorCommentProps) {
           rel="noopener noreferrer"
           className="inline-block mt-1.5 text-xs text-amber-700 font-medium hover:underline"
         >
-          📝 詳しく読む →
+          📝 ブログ記事はこちら →
         </a>
       )}
     </div>
