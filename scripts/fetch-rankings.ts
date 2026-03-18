@@ -121,33 +121,45 @@ async function fetchPage(token: string, config: { searchIndex: string; browseNod
     ],
   };
 
-  const res = await fetch(API_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "Authorization": `Bearer ${token}, Version ${API_VERSION}`,
-      "x-marketplace": MARKETPLACE,
-    },
-    body: JSON.stringify(body),
-  });
+  // 429 レートリミット時は最大3回リトライ（5秒・10秒・20秒待機）
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const res = await fetch(API_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": `Bearer ${token}, Version ${API_VERSION}`,
+        "x-marketplace": MARKETPLACE,
+      },
+      body: JSON.stringify(body),
+    });
 
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`API エラー (${res.status}): ${err}`);
+    if (res.status === 429) {
+      const waitMs = (attempt + 1) * 5000;
+      console.warn(`  ⚠ レートリミット(429)。${waitMs / 1000}秒後にリトライ... (${attempt + 1}/3)`);
+      await new Promise((r) => setTimeout(r, waitMs));
+      continue;
+    }
+
+    if (!res.ok) {
+      const err = await res.text();
+      throw new Error(`API エラー (${res.status}): ${err}`);
+    }
+
+    const data = await res.json() as {
+      searchResult?: {
+        items?: Array<{
+          asin?: string;
+          itemInfo?: { title?: { displayValue?: string } };
+          images?: { primary?: { large?: { url?: string }; medium?: { url?: string } } };
+          offersV2?: { listings?: Array<{ price?: { displayAmount?: string } }> };
+        }>;
+      };
+    };
+
+    return data.searchResult?.items ?? [];
   }
 
-  const data = await res.json() as {
-    searchResult?: {
-      items?: Array<{
-        asin?: string;
-        itemInfo?: { title?: { displayValue?: string } };
-        images?: { primary?: { large?: { url?: string }; medium?: { url?: string } } };
-        offersV2?: { listings?: Array<{ price?: { displayAmount?: string } }> };
-      }>;
-    };
-  };
-
-  return data.searchResult?.items ?? [];
+  throw new Error("API エラー: レートリミットを超過しました (429)");
 }
 
 async function searchItems(config: { slug: string; name: string; searchIndex: string; browseNodeId: string; keywords?: string }): Promise<GeneratedProduct[]> {
