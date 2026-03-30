@@ -255,7 +255,7 @@ function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-async function processCategory(config: { slug: string; name: string; searchIndex: string; browseNodeId: string; keywords?: string }) {
+async function processCategory(config: { slug: string; name: string; searchIndex: string; browseNodeId: string; keywords?: string | string[] }) {
   console.log(`\n[${config.name}] 取得中...`);
   try {
     const products = await searchItems(config);
