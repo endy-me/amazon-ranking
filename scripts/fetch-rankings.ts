@@ -162,15 +162,34 @@ async function fetchPage(token: string, config: { searchIndex: string; browseNod
   throw new Error("API エラー: レートリミットを超過しました (429)");
 }
 
-async function searchItems(config: { slug: string; name: string; searchIndex: string; browseNodeId: string; keywords?: string }): Promise<GeneratedProduct[]> {
+async function searchItems(config: { slug: string; name: string; searchIndex: string; browseNodeId: string; keywords?: string | string[] }): Promise<GeneratedProduct[]> {
   const token = await getAccessToken();
 
-  const page1 = await fetchPage(token, config, 1);
-  await new Promise((r) => setTimeout(r, 500));
-  const page2 = await fetchPage(token, config, 2);
-  const items = [...page1, ...page2];
+  // keywords が配列の場合は各キーワードで1ページずつ取得してASINで重複排除
+  // （VideoGames・Toys等、page2が返らないsearchIndexへの対処）
+  const keywordList = Array.isArray(config.keywords) ? config.keywords : [config.keywords];
+  const rawItems: Array<{ asin?: string; itemInfo?: { title?: { displayValue?: string } }; images?: { primary?: { large?: { url?: string }; medium?: { url?: string } } }; offersV2?: { listings?: Array<{ price?: { displayAmount?: string } }> } }> = [];
+  const seenAsins = new Set<string>();
 
-  return items
+  for (let ki = 0; ki < keywordList.length; ki++) {
+    const kw = keywordList[ki];
+    const cfgForKw = { ...config, keywords: kw };
+    const page1 = await fetchPage(token, cfgForKw, 1);
+    await new Promise((r) => setTimeout(r, 500));
+    const page2 = await fetchPage(token, cfgForKw, 2);
+    for (const item of [...page1, ...page2]) {
+      if (item.asin && !seenAsins.has(item.asin)) {
+        seenAsins.add(item.asin);
+        rawItems.push(item);
+      }
+    }
+    if (ki < keywordList.length - 1) {
+      await new Promise((r) => setTimeout(r, 1000));
+    }
+  }
+
+  return rawItems
+    .slice(0, 20)
     .map((item, i) => {
       const asin = item.asin ?? "";
       const title = item.itemInfo?.title?.displayValue ?? "";
@@ -214,7 +233,7 @@ const CATEGORY_CONFIG = [
   { slug: "compact-camera",    name: "コンパクトデジカメ",    searchIndex: "Electronics",           browseNodeId: "387455011"  },
   { slug: "action-camera",     name: "アクションカメラ",      searchIndex: "Electronics",           browseNodeId: "2680377051" },
   // エンタメ
-  { slug: "game-software",     name: "ゲーム",                searchIndex: "VideoGames",            browseNodeId: "637392"     },
+  { slug: "game-software",     name: "ゲーム",                searchIndex: "VideoGames",            browseNodeId: "",           keywords: ["Nintendo Switch", "PlayStation Xbox PC ゲーム"] },
   { slug: "dvd",               name: "DVD・ブルーレイ",       searchIndex: "Music",                 browseNodeId: "",           keywords: "DVD ブルーレイ 映画" },
   // 本
   { slug: "books-all",         name: "本（総合）",            searchIndex: "Books",                 browseNodeId: ""           },
@@ -224,7 +243,7 @@ const CATEGORY_CONFIG = [
   { slug: "books-photo",       name: "写真集",                searchIndex: "Books",                 browseNodeId: "500592"     },
   // ライフスタイル
   { slug: "hobby",             name: "ホビー",                searchIndex: "Hobbies",               browseNodeId: ""           },
-  { slug: "toys",              name: "おもちゃ",              searchIndex: "Toys",                  browseNodeId: ""           },
+  { slug: "toys",              name: "おもちゃ",              searchIndex: "Toys",                  browseNodeId: "",           keywords: ["おもちゃ 人気", "知育玩具 ブロック フィギュア"] },
   { slug: "fashion",           name: "ファッション",          searchIndex: "Apparel",               browseNodeId: ""           },
   { slug: "beauty",            name: "ビューティ",            searchIndex: "Beauty",                browseNodeId: ""           },
   { slug: "drugstore",         name: "日用品",                searchIndex: "HealthPersonalCare",    browseNodeId: ""           },
