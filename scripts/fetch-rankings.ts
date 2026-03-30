@@ -189,7 +189,6 @@ async function searchItems(config: { slug: string; name: string; searchIndex: st
   }
 
   return rawItems
-    .slice(0, 20)
     .map((item, i) => {
       const asin = item.asin ?? "";
       const title = item.itemInfo?.title?.displayValue ?? "";
@@ -212,7 +211,9 @@ async function searchItems(config: { slug: string; name: string; searchIndex: st
         updatedAt: TODAY,
       } satisfies GeneratedProduct;
     })
-    .filter((p): p is NonNullable<typeof p> => p !== null);
+    .filter((p): p is NonNullable<typeof p> => p !== null)
+    .slice(0, 20)
+    .map((p, i) => ({ ...p, rank: i + 1, badge: i === 0 ? "1位" : null }));
 }
 
 // カテゴリ設定
@@ -243,7 +244,7 @@ const CATEGORY_CONFIG = [
   { slug: "books-photo",       name: "写真集",                searchIndex: "Books",                 browseNodeId: "500592"     },
   // ライフスタイル
   { slug: "hobby",             name: "ホビー",                searchIndex: "Hobbies",               browseNodeId: ""           },
-  { slug: "toys",              name: "おもちゃ",              searchIndex: "Toys",                  browseNodeId: "",           keywords: ["おもちゃ 人気", "知育玩具 ブロック フィギュア"] },
+  { slug: "toys",              name: "おもちゃ",              searchIndex: "Toys",                  browseNodeId: "",           keywords: ["おもちゃ", "ぬいぐるみ プラモデル"] },
   { slug: "fashion",           name: "ファッション",          searchIndex: "Apparel",               browseNodeId: ""           },
   { slug: "beauty",            name: "ビューティ",            searchIndex: "Beauty",                browseNodeId: ""           },
   { slug: "drugstore",         name: "日用品",                searchIndex: "HealthPersonalCare",    browseNodeId: ""           },
