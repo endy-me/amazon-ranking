@@ -10,6 +10,13 @@ export function RankTrend({ change }: RankTrendProps) {
       </span>
     );
   }
+  if (change >= 5) {
+    return (
+      <span className="inline-flex items-center gap-0.5 text-xs font-black text-white bg-rose-500 px-1.5 py-0.5 rounded-full">
+        🔥急上昇 +{change}
+      </span>
+    );
+  }
   if (change > 0) {
     return (
       <span className="inline-flex items-center text-xs text-emerald-600 font-bold">

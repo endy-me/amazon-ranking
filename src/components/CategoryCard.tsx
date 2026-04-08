@@ -68,9 +68,16 @@ export function CategoryCard({ category, topProducts }: CategoryCardProps) {
               <p className="text-xs font-medium text-gray-800 line-clamp-2 group-hover:text-orange-600 transition-colors">
                 {product.title}
               </p>
-              {product.price && (
-                <p className="text-xs font-bold text-orange-600 mt-0.5">{product.price}</p>
-              )}
+              <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
+                {product.price && (
+                  <p className="text-xs font-bold text-orange-600">{product.price}</p>
+                )}
+                {product.rating != null && (
+                  <span className="text-xs text-yellow-500 font-medium">
+                    ★{product.rating.toFixed(1)}
+                  </span>
+                )}
+              </div>
             </div>
           </a>
         ))}

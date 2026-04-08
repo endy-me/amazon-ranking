@@ -99,6 +99,8 @@ interface GeneratedProduct {
   price: string | null;
   description: string | null;
   badge: string | null;
+  rating: number | null;
+  reviewCount: number | null;
   updatedAt: string;
 }
 
@@ -151,7 +153,7 @@ async function fetchPage(token: string, config: { searchIndex: string; browseNod
           asin?: string;
           itemInfo?: { title?: { displayValue?: string } };
           images?: { primary?: { large?: { url?: string }; medium?: { url?: string } } };
-          offersV2?: { listings?: Array<{ price?: { displayAmount?: string } }> };
+          offersV2?: { listings?: Array<{ price?: { money?: { displayAmount?: string } } }> };
         }>;
       };
     };
@@ -168,7 +170,7 @@ async function searchItems(config: { slug: string; name: string; searchIndex: st
   // keywords が配列の場合は各キーワードで1ページずつ取得してASINで重複排除
   // （VideoGames・Toys等、page2が返らないsearchIndexへの対処）
   const keywordList = Array.isArray(config.keywords) ? config.keywords : [config.keywords];
-  const rawItems: Array<{ asin?: string; itemInfo?: { title?: { displayValue?: string } }; images?: { primary?: { large?: { url?: string }; medium?: { url?: string } } }; offersV2?: { listings?: Array<{ price?: { displayAmount?: string } }> } }> = [];
+  const rawItems: Array<{ asin?: string; itemInfo?: { title?: { displayValue?: string } }; images?: { primary?: { large?: { url?: string }; medium?: { url?: string } } }; offersV2?: { listings?: Array<{ price?: { money?: { displayAmount?: string } } }> } }> = [];
   const seenAsins = new Set<string>();
 
   for (let ki = 0; ki < keywordList.length; ki++) {
@@ -195,7 +197,7 @@ async function searchItems(config: { slug: string; name: string; searchIndex: st
       const image =
         item.images?.primary?.large?.url ??
         item.images?.primary?.medium?.url ?? "";
-      const price = item.offersV2?.listings?.[0]?.price?.displayAmount ?? null;
+      const price = item.offersV2?.listings?.[0]?.price?.money?.displayAmount ?? null;
 
       if (!asin || !title) return null;
 
@@ -208,6 +210,8 @@ async function searchItems(config: { slug: string; name: string; searchIndex: st
         price,
         description: null,
         badge: i === 0 ? "1位" : null,
+        rating: null,
+        reviewCount: null,
         updatedAt: TODAY,
       } satisfies GeneratedProduct;
     })

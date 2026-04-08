@@ -9,6 +9,8 @@ export interface Product {
   badge?: string;
   updatedAt: string;
   rankChange?: number | null; // 正数=上昇, 負数=下降, null=初登場
+  rating?: number;           // Amazonレビュー星評価 (e.g., 4.5)
+  reviewCount?: number;      // レビュー件数
   editorRating?: number;   // 1〜5
   editorComment?: string;  // 中の人コメント
   editorUrl?: string;      // ブログ記事などのURL

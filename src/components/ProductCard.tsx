@@ -9,6 +9,26 @@ interface ProductCardProps {
   variant?: "compact" | "full";
 }
 
+function StarRating({ rating, reviewCount }: { rating?: number; reviewCount?: number }) {
+  if (!rating) return null;
+  const full = Math.floor(rating);
+  const half = rating - full >= 0.25 && rating - full < 0.75;
+  const empty = 5 - full - (half ? 1 : 0);
+  return (
+    <span className="inline-flex items-center gap-1 text-xs text-gray-500">
+      <span className="text-yellow-400 leading-none">
+        {"★".repeat(full)}
+        {half ? "½" : ""}
+        {"☆".repeat(empty)}
+      </span>
+      <span className="font-medium text-gray-700">{rating.toFixed(1)}</span>
+      {reviewCount != null && reviewCount > 0 && (
+        <span className="text-gray-400">({reviewCount.toLocaleString()}件)</span>
+      )}
+    </span>
+  );
+}
+
 export function ProductCard({ product, variant = "full" }: ProductCardProps) {
   if (variant === "compact") {
     return (
@@ -35,19 +55,35 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
           {product.price && (
             <p className="text-sm font-bold text-orange-600 mt-1">{product.price}</p>
           )}
+          <StarRating rating={product.rating} reviewCount={product.reviewCount} />
         </div>
       </a>
     );
   }
 
+  const isTop3 = product.rank <= 3;
+  const cardClass = isTop3
+    ? "bg-white rounded-xl border-2 border-orange-200 shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+    : "bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden";
+
   return (
-    <div className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+    <div className={cardClass}>
+      {isTop3 && (
+        <div className="bg-gradient-to-r from-orange-500 to-amber-400 px-4 py-1.5 flex items-center gap-2">
+          <span className="text-white text-xs font-black">
+            {product.rank === 1 ? "🥇 1位" : product.rank === 2 ? "🥈 2位" : "🥉 3位"}
+          </span>
+          <span className="text-orange-100 text-xs">売れ筋ランキング上位</span>
+        </div>
+      )}
       <div className="p-5">
         <div className="flex gap-4">
-          <div className="flex-shrink-0">
-            <RankBadge rank={product.rank} size={product.rank <= 3 ? "lg" : "sm"} />
-          </div>
-          <div className="w-32 h-32 relative flex-shrink-0">
+          {!isTop3 && (
+            <div className="flex-shrink-0">
+              <RankBadge rank={product.rank} size="sm" />
+            </div>
+          )}
+          <div className={`relative flex-shrink-0 ${isTop3 ? "w-36 h-36" : "w-32 h-32"}`}>
             <Image
               src={product.image}
               alt={product.title}
@@ -58,19 +94,26 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap mb-1">
-              {product.badge && (
+              {product.badge && !isTop3 && (
                 <span className="inline-block px-2 py-0.5 text-xs font-bold bg-orange-100 text-orange-700 rounded-full">
                   {product.badge}
                 </span>
               )}
               <RankTrend change={product.rankChange} />
             </div>
-            <h3 className="font-semibold text-gray-900 text-sm leading-snug line-clamp-3">
+            <h3 className={`font-semibold text-gray-900 leading-snug line-clamp-3 ${isTop3 ? "text-base" : "text-sm"}`}>
               {product.title}
             </h3>
-            {product.price && (
-              <p className="text-xl font-bold text-orange-600 mt-2">{product.price}</p>
+            {product.price ? (
+              <p className={`font-bold text-orange-600 mt-2 ${isTop3 ? "text-2xl" : "text-xl"}`}>
+                {product.price}
+              </p>
+            ) : (
+              <p className="text-sm text-gray-400 mt-2">価格はAmazonで確認</p>
             )}
+            <div className="mt-1.5">
+              <StarRating rating={product.rating} reviewCount={product.reviewCount} />
+            </div>
             {product.description && (
               <p className="text-xs text-gray-500 mt-2 line-clamp-2">{product.description}</p>
             )}
@@ -81,9 +124,13 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
           href={product.affiliateUrl}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="mt-4 block w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-2.5 px-4 rounded-lg transition-colors text-sm"
+          className={`mt-4 block w-full text-center text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm ${
+            isTop3
+              ? "bg-orange-500 hover:bg-orange-600 shadow-sm"
+              : "bg-orange-500 hover:bg-orange-600"
+          }`}
         >
-          Amazonで見る →
+          Amazonで価格を確認する →
         </a>
       </div>
       <div className="px-5 pb-3 text-right">
