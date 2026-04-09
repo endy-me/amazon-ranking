@@ -3,10 +3,17 @@ import { Product } from "@/types";
 import { RankBadge } from "./RankBadge";
 import { RankTrend } from "./RankTrend";
 import { EditorComment } from "./EditorComment";
+import { PriceSparkline } from "./PriceSparkline";
+
+interface PricePoint {
+  date: string;
+  price: number;
+}
 
 interface ProductCardProps {
   product: Product;
   variant?: "compact" | "full";
+  priceHistory?: PricePoint[];
 }
 
 function StarRating({ rating, reviewCount }: { rating?: number; reviewCount?: number }) {
@@ -29,7 +36,9 @@ function StarRating({ rating, reviewCount }: { rating?: number; reviewCount?: nu
   );
 }
 
-export function ProductCard({ product, variant = "full" }: ProductCardProps) {
+export function ProductCard({ product, variant = "full", priceHistory }: ProductCardProps) {
+  const reviewUrl = `https://www.amazon.co.jp/product-reviews/${product.asin}/`;
+
   if (variant === "compact") {
     return (
       <a
@@ -65,6 +74,11 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
   const cardClass = isTop3
     ? "bg-white rounded-xl border-2 border-orange-200 shadow-md hover:shadow-lg transition-shadow overflow-hidden"
     : "bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden";
+
+  // 現在価格を数値化（スパークライン用）
+  const currentPriceNum = product.price
+    ? parseFloat(product.price.replace(/[^0-9.]/g, "")) || undefined
+    : undefined;
 
   return (
     <div className={cardClass}>
@@ -111,26 +125,38 @@ export function ProductCard({ product, variant = "full" }: ProductCardProps) {
             ) : (
               <p className="text-sm text-gray-400 mt-2">価格はAmazonで確認</p>
             )}
-            <div className="mt-1.5">
-              <StarRating rating={product.rating} reviewCount={product.reviewCount} />
-            </div>
+            <StarRating rating={product.rating} reviewCount={product.reviewCount} />
             {product.description && (
               <p className="text-xs text-gray-500 mt-2 line-clamp-2">{product.description}</p>
+            )}
+            {/* 価格推移スパークライン */}
+            {priceHistory && priceHistory.length >= 1 && (
+              <PriceSparkline history={priceHistory} currentPrice={currentPriceNum} />
             )}
           </div>
         </div>
         <EditorComment rating={product.editorRating} comment={product.editorComment} url={product.editorUrl} />
+
+        {/* Amazonレビューへのリンク */}
+        <div className="mt-3 text-center">
+          <a
+            href={reviewUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-xs text-gray-400 hover:text-orange-500 transition-colors underline underline-offset-2"
+          >
+            Amazonのレビューを見る
+          </a>
+        </div>
+
+        {/* メインCTA */}
         <a
           href={product.affiliateUrl}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className={`mt-4 block w-full text-center text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm ${
-            isTop3
-              ? "bg-orange-500 hover:bg-orange-600 shadow-sm"
-              : "bg-orange-500 hover:bg-orange-600"
-          }`}
+          className="mt-3 block w-full text-center text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm bg-orange-500 hover:bg-orange-600"
         >
-          Amazonで価格を確認する →
+          {product.price ? "Amazonで購入する →" : "Amazonで価格を確認する →"}
         </a>
       </div>
       <div className="px-5 pb-3 text-right">

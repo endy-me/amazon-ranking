@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { categories, getCategoryBySlug } from "@/data/categories";
 import { getProductsBySlug } from "@/data/products";
-import { getRankingWithTrend, getAvailableDates, isDbAvailable } from "@/lib/db";
+import { getRankingWithTrend, getAvailableDates, getPriceHistoryBatch, isDbAvailable } from "@/lib/db";
 import { getAvailableDatesFromHistory } from "@/lib/ranking-history";
 import { ProductCard } from "@/components/ProductCard";
 import { RankingHistoryNav } from "@/components/RankingHistoryNav";
@@ -60,6 +60,15 @@ export default async function CategoryPage({ params }: Props) {
   }
 
   products = mergeEditorPicks(products);
+
+  // 価格履歴（Supabaseが使える場合のみ）
+  let priceHistoryMap: Record<string, { date: string; price: number }[]> = {};
+  if (hasDbData) {
+    priceHistoryMap = await getPriceHistoryBatch(
+      products.map((p) => p.asin),
+      slug
+    );
+  }
 
   // 過去日付一覧（Supabase優先、なければ ranking-history/ から取得）
   let availableDates: string[] = [];
@@ -120,7 +129,12 @@ export default async function CategoryPage({ params }: Props) {
       ) : (
         <div className="space-y-4">
           {products.map((product) => (
-            <ProductCard key={product.asin} product={product} variant="full" />
+            <ProductCard
+              key={product.asin}
+              product={product}
+              variant="full"
+              priceHistory={priceHistoryMap[product.asin]}
+            />
           ))}
         </div>
       )}

@@ -101,6 +101,40 @@ export async function getRankingByDate(
   return (data as { category: string; rank: number; asin: string; title: string; image: string | null; price: string | null; captured_at: string }[]).map((row) => ({ ...row, current_rank: row.rank, prev_rank: null, rank_change: null }));
 }
 
+// カテゴリ内の全ASINの価格履歴をまとめて取得（SSGビルド時用）
+export async function getPriceHistoryBatch(
+  asins: string[],
+  category: string,
+  days = 60
+): Promise<Record<string, { date: string; price: number }[]>> {
+  if (asins.length === 0) return {};
+  const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .split("T")[0];
+
+  const { data } = await getSupabaseClient()
+    .from("ranking_snapshots")
+    .select("asin, captured_at, price")
+    .eq("category", category)
+    .in("asin", asins)
+    .gte("captured_at", since)
+    .not("price", "is", null)
+    .order("captured_at", { ascending: true });
+
+  const result: Record<string, { date: string; price: number }[]> = {};
+  for (const row of (data ?? []) as { asin: string; captured_at: string; price: string }[]) {
+    const num = parseFloat(row.price.replace(/[^0-9.]/g, ""));
+    if (isNaN(num)) continue;
+    const date = String(row.captured_at).substring(0, 10);
+    if (!result[row.asin]) result[row.asin] = [];
+    // 同日の重複を除く
+    if (result[row.asin].at(-1)?.date !== date) {
+      result[row.asin].push({ date, price: num });
+    }
+  }
+  return result;
+}
+
 // DBが利用可能かチェック
 export async function isDbAvailable(): Promise<boolean> {
   if (
