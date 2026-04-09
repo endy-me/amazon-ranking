@@ -37,7 +37,7 @@ function StarRating({ rating, reviewCount }: { rating?: number; reviewCount?: nu
 }
 
 export function ProductCard({ product, variant = "full", priceHistory }: ProductCardProps) {
-  const reviewUrl = `https://www.amazon.co.jp/product-reviews/${product.asin}/`;
+  const reviewUrl = `https://www.amazon.co.jp/product-reviews/${product.asin}/?tag=amazonrankingbest-22`;
 
   if (variant === "compact") {
     return (
